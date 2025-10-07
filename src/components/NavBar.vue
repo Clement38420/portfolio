@@ -30,7 +30,7 @@ const languageImage = computed(() => {
       </li>
     </ul>
     <button class="language-switch" @click="toggleLanguage">
-      <img :src="languageImage" :alt="locale" />
+      <img :src="languageImage" :alt="locale" loading="lazy" width="48" height="48" />
     </button>
   </nav>
 </template>
