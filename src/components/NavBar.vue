@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
 const { t, locale } = useI18n()
 
 function toggleLanguage() {
   locale.value = locale.value === 'en' ? 'fr' : 'en'
 }
+
+const languageImage = computed(() => {
+  return new URL(`../assets/images/${locale.value}.svg`, import.meta.url).href
+})
 </script>
 
 <template>
@@ -25,7 +30,7 @@ function toggleLanguage() {
       </li>
     </ul>
     <button class="language-switch" @click="toggleLanguage">
-      <img src="../assets/images/en.svg" alt="EN" />
+      <img :src="languageImage" :alt="locale" />
     </button>
   </nav>
 </template>
@@ -65,7 +70,21 @@ h1 {
 }
 
 .language-switch {
-  width: 2em;
-  height: 2em;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5em;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.language-switch img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 2px;
 }
 </style>
