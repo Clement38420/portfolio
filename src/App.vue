@@ -30,6 +30,7 @@ import NavBar from './components/NavBar.vue'
   --text-muted: hsl(0, 0%, 60%);
 
   --card-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.07);
+  --card-shadow-close: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 body {

@@ -64,20 +64,17 @@ h1 {
   list-style: none;
 }
 
-.navbar-item {
-  padding: 8px;
-  transition: 0.1s background-color;
-}
-
-.navbar-item:hover {
-  background-color: var(--bg-color);
-  border-radius: 8px;
-}
-
 .view-link {
   color: black;
   text-decoration: none;
   text-transform: uppercase;
+  padding: 12px;
+  transition: 0.1s background-color;
+}
+
+.view-link:hover {
+  background-color: var(--bg-color);
+  border-radius: 8px;
 }
 
 .language-switch {
@@ -90,6 +87,15 @@ h1 {
   border: none;
   padding: 0;
   cursor: pointer;
+  transition: 0.1s box-shadow;
+}
+
+.language-switch:hover {
+  box-shadow: var(--card-shadow);
+}
+
+.language-switch:active {
+  box-shadow: var(--card-shadow-close);
 }
 
 .language-switch img {
