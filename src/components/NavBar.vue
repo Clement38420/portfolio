@@ -39,7 +39,7 @@ const languageImage = computed(() => {
 nav {
   width: 100%;
   height: 70px;
-  background-color: white;
+  background-color: var(--bg-light-color);
   box-shadow: var(--card-shadow);
   display: flex;
   justify-content: space-around;
@@ -64,9 +64,20 @@ h1 {
   list-style: none;
 }
 
+.navbar-item {
+  padding: 8px;
+  transition: 0.1s background-color;
+}
+
+.navbar-item:hover {
+  background-color: var(--bg-color);
+  border-radius: 8px;
+}
+
 .view-link {
   color: black;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .language-switch {

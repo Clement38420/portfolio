@@ -22,11 +22,18 @@ import NavBar from './components/NavBar.vue'
 }
 
 :root {
-  --card-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --bg-color: hsl(0, 0%, 95%);
+  --bg-light-color: hsl(0, 0%, 100%);
+  --bg-dark-color: hsl(0, 0%, 90%);
+
+  --text-color: hsl(0, 0%, 5%);
+  --text-muted: hsl(0, 0%, 60%);
+
+  --card-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.07);
 }
 
 body {
-  background-color: #c3c3c3;
+  background-color: var(--bg-color);
   font-family: Calibri, sans-serif;
 }
 </style>
