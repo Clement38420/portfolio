@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "messages": {
+    "heading": "Hi, I am Clément Charbonnel"
+  }
+}

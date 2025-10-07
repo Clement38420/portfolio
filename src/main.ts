@@ -2,28 +2,16 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { createI18n } from 'vue-i18n'
 import { router } from '../router.ts'
+import fr from './locales/fr.json'
+import en from './locales/en.json'
 
 const i18n = createI18n({
   legacy: false,
   locale: 'fr',
   fallbackLocale: 'en',
   messages: {
-    fr: {
-      nav: {
-        home: 'Accueil',
-        about: 'À propos',
-        projects: 'Projets',
-        contact: 'Contact',
-      },
-    },
-    en: {
-      nav: {
-        home: 'Home',
-        about: 'About',
-        projects: 'Projects',
-        contact: 'Contact',
-      },
-    },
+    fr,
+    en,
   },
 })
 
