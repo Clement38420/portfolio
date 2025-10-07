@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
-const { t, locale } = useI18n()
+const { locale } = useI18n()
 
 function toggleLanguage() {
   locale.value = locale.value === 'en' ? 'fr' : 'en'
@@ -17,16 +17,16 @@ const languageImage = computed(() => {
     <h1>Clément Charbonnel</h1>
     <ul class="navbar-items">
       <li class="navbar-item">
-        <RouterLink class="view-link" to="/">{{ t('nav.home') }}</RouterLink>
+        <RouterLink class="view-link" to="/">{{ $t('nav.home') }}</RouterLink>
       </li>
       <li class="navbar-item">
-        <RouterLink class="view-link" to="/about">{{ t('nav.about') }}</RouterLink>
+        <RouterLink class="view-link" to="/about">{{ $t('nav.about') }}</RouterLink>
       </li>
       <li class="navbar-item">
-        <RouterLink class="view-link" to="/projects">{{ t('nav.projects') }}</RouterLink>
+        <RouterLink class="view-link" to="/projects">{{ $t('nav.projects') }}</RouterLink>
       </li>
       <li class="navbar-item">
-        <RouterLink class="view-link" to="/contact">{{ t('nav.contact') }}</RouterLink>
+        <RouterLink class="view-link" to="/contact">{{ $t('nav.contact') }}</RouterLink>
       </li>
     </ul>
     <button class="language-switch" @click="toggleLanguage">
