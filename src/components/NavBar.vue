@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-const { t } = useI18n()
+const { t, locale } = useI18n()
+
+function toggleLanguage() {
+  locale.value = locale.value === 'en' ? 'fr' : 'en'
+}
 </script>
 
 <template>
@@ -20,6 +24,9 @@ const { t } = useI18n()
         <RouterLink class="view-link" to="/contact">{{ t('nav.contact') }}</RouterLink>
       </li>
     </ul>
+    <button class="language-switch" @click="toggleLanguage">
+      <img src="../assets/images/en.svg" alt="EN" />
+    </button>
   </nav>
 </template>
 
@@ -55,5 +62,10 @@ h1 {
 .view-link {
   color: black;
   text-decoration: none;
+}
+
+.language-switch {
+  width: 2em;
+  height: 2em;
 }
 </style>
