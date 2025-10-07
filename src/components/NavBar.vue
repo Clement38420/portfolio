@@ -7,8 +7,10 @@ function toggleLanguage() {
   locale.value = locale.value === 'en' ? 'fr' : 'en'
 }
 
+const toLanguage = computed(() => (locale.value === 'en' ? 'fr' : 'en'))
+
 const languageImage = computed(() => {
-  return new URL(`../assets/images/${locale.value}.svg`, import.meta.url).href
+  return new URL(`../assets/images/${toLanguage.value}.svg`, import.meta.url).href
 })
 </script>
 
@@ -30,7 +32,7 @@ const languageImage = computed(() => {
       </li>
     </ul>
     <button class="language-switch" @click="toggleLanguage">
-      <img :src="languageImage" :alt="locale" loading="lazy" width="48" height="48" />
+      <img :src="languageImage" :alt="toLanguage" loading="lazy" width="48" height="48" />
     </button>
   </nav>
 </template>
