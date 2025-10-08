@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, useTemplateRef } from 'vue'
-import type { hslaColor, Position } from '@/types'
+import type { Position } from '@/types'
 import { Bubble } from '@/classes'
 
 const NUMBER_OF_BUBBLES = 200
@@ -50,8 +50,8 @@ onMounted(() => {
 
 const windowDimensions = computed(() => {
   return {
-    width: window.screen.width,
-    height: window.screen.height,
+    width: window.screen.width * 2, // Higher resolution with * 2
+    height: window.screen.height * 2,
   }
 })
 </script>

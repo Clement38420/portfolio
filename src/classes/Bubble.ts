@@ -11,12 +11,12 @@ export class Bubble {
   constructor(position: Position, velocity?: Velocity, radius?: number, color?: hslaColor) {
     this.position = position
     this.velocity = velocity || { x: (Math.random() - 0.5) / 2, y: (Math.random() - 0.5) / 2 }
-    this.radius = radius || Math.random() * 5 + 3
+    this.radius = radius || Math.random() * 10 + 6
     this.color = color || {
-      h: 0,
-      s: 0,
+      h: 210,
+      s: 10,
       l: Math.random() * 30 + 50,
-      a: 0.6,
+      a: 0.7,
     }
   }
 
