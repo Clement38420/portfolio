@@ -1,21 +1,12 @@
 <script setup lang="ts">
 import { computed, onMounted, useTemplateRef } from 'vue'
+import type { hslaColor, Position } from '@/types'
+import { Bubble } from '@/classes'
 
 const NUMBER_OF_BUBBLES = 50
+let bubbles = Array<Bubble>(NUMBER_OF_BUBBLES)
 
 const bubblesCanvas = useTemplateRef('bubbles-canvas')
-
-interface Position {
-  x: number
-  y: number
-}
-
-interface hslaColor {
-  h: number
-  s: number
-  l: number
-  a: number
-}
 
 function getRandomCoordinatesInCanvas(): Position {
   if (!bubblesCanvas.value) return { x: 0, y: 0 }
@@ -25,33 +16,32 @@ function getRandomCoordinatesInCanvas(): Position {
   }
 }
 
-function drawDisk(
-  ctx: CanvasRenderingContext2D,
-  position: Position,
-  radius: number,
-  color: hslaColor,
-) {
+function drawBubble(ctx: CanvasRenderingContext2D, bubble: Bubble) {
   ctx.beginPath()
-  ctx.arc(position.x, position.y, radius, 0, Math.PI * 2, true)
-  ctx.fillStyle = `hsla(${color.h}, ${color.s}%, ${color.l}%, ${color.a})`
+  ctx.arc(bubble.position.x, bubble.position.y, bubble.radius, 0, Math.PI * 2, true)
+  ctx.fillStyle = `hsla(${bubble.color.h}, ${bubble.color.s}%, ${bubble.color.l}%, ${bubble.color.a})`
   ctx.fill()
 }
 
-onMounted(() => {
+function render() {
   const ctx = bubblesCanvas.value?.getContext('2d')
   if (ctx) {
-    for (let i = 0; i < NUMBER_OF_BUBBLES; i++) {
-      const position: Position = getRandomCoordinatesInCanvas()
-      const radius = Math.random() * 3 + 6
-      const color: hslaColor = {
-        h: 0,
-        s: 0,
-        l: Math.random() * 30 + 50,
-        a: 0.6,
-      }
-      drawDisk(ctx, position, radius, color)
-    }
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
+    bubbles.forEach((bubble) => {
+      bubble.update(ctx.canvas.width, ctx.canvas.height)
+      drawBubble(ctx, bubble)
+    })
   }
+  requestAnimationFrame(render)
+}
+
+onMounted(() => {
+  bubbles = Array.from(
+    { length: NUMBER_OF_BUBBLES },
+    () => new Bubble(getRandomCoordinatesInCanvas()),
+  )
+
+  render()
 })
 
 const windowDimensions = computed(() => {
@@ -80,6 +70,5 @@ canvas#bubbles {
   object-fit: cover;
   z-index: -1;
   pointer-events: none;
-  border: 1px solid red;
 }
 </style>
