@@ -21,14 +21,4 @@ h2 {
   letter-spacing: -0.02em;
   margin: 0;
 }
-
-#waveCanvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  pointer-events: none;
-}
 </style>
