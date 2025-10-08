@@ -3,8 +3,10 @@ import { computed, onMounted, useTemplateRef } from 'vue'
 import type { hslaColor, Position } from '@/types'
 import { Bubble } from '@/classes'
 
-const NUMBER_OF_BUBBLES = 50
+const NUMBER_OF_BUBBLES = 200
 let bubbles = Array<Bubble>(NUMBER_OF_BUBBLES)
+
+let time = 0
 
 const bubblesCanvas = useTemplateRef('bubbles-canvas')
 
@@ -28,10 +30,12 @@ function render() {
   if (ctx) {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
     bubbles.forEach((bubble) => {
-      bubble.update(ctx.canvas.width, ctx.canvas.height)
+      bubble.update(time, ctx.canvas.width, ctx.canvas.height)
       drawBubble(ctx, bubble)
     })
   }
+
+  time += 1
   requestAnimationFrame(render)
 }
 
