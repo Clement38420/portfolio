@@ -6,12 +6,12 @@ export class Bubble {
   private velocity: Velocity
   public radius: number
   public color: hslaColor
-  private readonly randomSeed: number = Math.random() / 100
+  private readonly randomSeed: number = Math.random() / 100 // Random value for wave motion generation
 
   constructor(position: Position, velocity?: Velocity, radius?: number, color?: hslaColor) {
     this.position = position
     this.velocity = velocity || { x: (Math.random() - 0.5) / 2, y: (Math.random() - 0.5) / 2 }
-    this.radius = radius || Math.random() * 10 + 6
+    this.radius = radius || Math.random() * 14 + 6
     this.color = color || {
       h: 210,
       s: 10,
@@ -22,7 +22,7 @@ export class Bubble {
 
   public update(time: number, canvasWidth: number, canvasHeight: number): void {
     this.position.x +=
-      this.velocity.x + Math.sin(time * this.randomSeed + this.position.x * 0.01) * 0.2
+      this.velocity.x + Math.sin(time * this.randomSeed + this.position.x * 0.01) * 0.2 // The first component is the velocity, the second adds a wave-like motion
     this.position.y +=
       this.velocity.y + Math.cos(time * this.randomSeed + this.position.y * 0.01) * 0.2
 
@@ -34,7 +34,8 @@ export class Bubble {
       this.velocity.y = -this.velocity.y
     }
 
-    this.velocity.y *= 0.99 // Damping effect
-    this.velocity.x *= 0.99 // Damping effect
+    // Damping effect
+    this.velocity.y *= 0.99
+    this.velocity.x *= 0.99
   }
 }
