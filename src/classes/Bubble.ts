@@ -22,9 +22,9 @@ export class Bubble {
 
   public update(time: number, canvasWidth: number, canvasHeight: number): void {
     this.position.x +=
-      this.velocity.x + Math.sin(time * this.randomSeed + this.position.x * 0.01) * 0.08
+      this.velocity.x + Math.sin(time * this.randomSeed + this.position.x * 0.01) * 0.2
     this.position.y +=
-      this.velocity.y + Math.cos(time * this.randomSeed + this.position.y * 0.01) * 0.08
+      this.velocity.y + Math.cos(time * this.randomSeed + this.position.y * 0.01) * 0.2
 
     // Bounce off the walls
     if (this.position.x + this.radius > canvasWidth || this.position.x - this.radius < 0) {
