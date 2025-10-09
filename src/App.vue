@@ -31,10 +31,12 @@ import NavBar from './components/NavBar.vue'
 
   --card-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.07);
   --card-shadow-close: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  --card-shadow-high: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 8px 12px 0 rgba(0, 0, 0, 0.1);
 }
 
 body {
-  background-color: var(--bg-color);
+  background-color: var(--bg-dark-color);
   font-family: Calibri, sans-serif;
+  color: var(--text-color);
 }
 </style>
