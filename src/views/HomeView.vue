@@ -3,7 +3,7 @@ import HomeBubbles from '@/components/HomeBubbles.vue'
 </script>
 
 <template>
-  <h2>Salut ! Je m'appelle Clément</h2>
+  <h2>{{ $t('messages.heading') }}</h2>
   <HomeBubbles></HomeBubbles>
 </template>
 
@@ -13,12 +13,34 @@ h2 {
   font-size: clamp(2.5rem, 8vw, 6rem);
   font-weight: 800;
   line-height: 1.1;
-  position: absolute;
+  letter-spacing: -0.02em;
+  max-width: 900px;
+  text-align: center;
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 30%, #2563eb 70%, #1d4ed8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 4px 12px rgba(96, 165, 250, 0.3))
+    drop-shadow(0 0 20px rgba(96, 165, 250, 0.2));
+  text-shadow: 0 0 6px hsla(224, 76%, 48%, 0.3);
+  cursor: default;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  letter-spacing: -0.02em;
-  margin: 0;
+  animation: 1s ease-out 0.1s fadein;
+  animation-fill-mode: both;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 20px));
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 </style>
