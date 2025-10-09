@@ -12,11 +12,11 @@ let bubbles = Array<Bubble>(NUMBER_OF_BUBBLES)
 let time = 0
 
 // Mouse attraction
-let isMouseAttracting = false
-document.addEventListener('mouseout', () => (isMouseAttracting = false))
+let isMouseInteracting = false
+document.addEventListener('mouseout', () => (isMouseInteracting = false))
 let mousePosition: Position = { x: 0, y: 0 }
 document.addEventListener('mousemove', (event) => {
-  isMouseAttracting = true
+  isMouseInteracting = true
 
   if (!bubblesCanvas.value) {
     return mousePosition
@@ -27,6 +27,11 @@ document.addEventListener('mousemove', (event) => {
     bubblesCanvas.value,
   )
 })
+
+// Mouse repulsion
+let isMouseRepulsing = false
+document.addEventListener('mouseup', () => (isMouseRepulsing = false))
+document.addEventListener('mousedown', () => (isMouseRepulsing = true))
 
 // Mouse explosion
 document.addEventListener('click', () => {
@@ -44,7 +49,14 @@ function render() {
   if (ctx) {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
     bubbles.forEach((bubble) => {
-      bubble.update(time, ctx.canvas.width, ctx.canvas.height, mousePosition, isMouseAttracting)
+      bubble.update(
+        time,
+        ctx.canvas.width,
+        ctx.canvas.height,
+        mousePosition,
+        isMouseInteracting,
+        isMouseRepulsing,
+      )
       drawBubble(ctx, bubble)
     })
   }
