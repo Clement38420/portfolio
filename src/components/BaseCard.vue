@@ -14,11 +14,14 @@
   border-radius: 12px;
   box-shadow: var(--card-shadow);
   padding: 16px;
-  transition: box-shadow 0.2s ease;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 .card:hover {
   box-shadow: var(--card-shadow-high);
+  transform: translateY(-5px);
 }
 
 .highlight {
@@ -26,7 +29,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 12px;
+  height: 16px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   background: linear-gradient(0, var(--bg-color), var(--bg-light-color));
