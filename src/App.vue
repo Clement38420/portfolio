@@ -27,7 +27,7 @@ import NavBar from './components/NavBar.vue'
   --bg-dark-color: hsl(0, 0%, 90%);
 
   --text-color: hsl(0, 0%, 5%);
-  --text-muted: hsl(0, 0%, 60%);
+  --text-muted: hsl(0, 0%, 50%);
 
   --card-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.07);
   --card-shadow-close: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
