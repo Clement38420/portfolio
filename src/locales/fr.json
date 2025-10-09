@@ -7,5 +7,15 @@
   },
   "home": {
     "title": "Salut, je m'appelle Clément Charbonnel !"
+  },
+  "contact": {
+    "title": "Contactez-moi !",
+    "linkedin": {
+      "subtitle": "Réseau professionnel"
+    },
+    "email": {
+      "subtitle": "Contactez-moi par mail"
+    },
+    "footerNote": "Je suis actuellement à la recherche d'un stage en robotique pour l'été 2025 !"
   }
 }

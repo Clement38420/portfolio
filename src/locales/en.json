@@ -7,5 +7,15 @@
   },
   "home": {
     "title": "Hi, I'm Clément Charbonnel !"
+  },
+  "contact": {
+    "title": "Get in touch!",
+    "linkedin": {
+      "subtitle": "Professional network"
+    },
+    "email": {
+      "subtitle": "Contact me by mail"
+    },
+    "footerNote": "I'm currently looking for a robotics internship for summer 2025!"
   }
 }
