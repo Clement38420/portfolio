@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+import { createApp, watch } from 'vue'
 import App from './App.vue'
 import { createI18n } from 'vue-i18n'
 import { router } from '../router.ts'
@@ -13,6 +13,7 @@ import '@fontsource/inter/800.css'
 const i18n = createI18n({
   legacy: false,
   locale: 'fr',
+  seo: true,
   fallbackLocale: 'en',
   messages: {
     fr,
@@ -25,3 +26,11 @@ const app = createApp(App)
 app.use(i18n)
 app.use(router)
 app.mount('#app')
+
+watch(
+  () => i18n.global.locale.value,
+  (newLocale) => {
+    document.documentElement.setAttribute('lang', newLocale)
+  },
+  { immediate: true },
+)
