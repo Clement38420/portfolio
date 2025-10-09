@@ -29,7 +29,7 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: 1s ease-out 0.1s fadein;
+  animation: 0.7s ease-out 0.1s fadein;
   animation-fill-mode: both;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
