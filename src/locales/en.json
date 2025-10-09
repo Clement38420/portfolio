@@ -6,7 +6,8 @@
     "contact": "Contact"
   },
   "home": {
-    "title": "Hi, I'm Clément Charbonnel !"
+    "title": "Hi, I'm Clément Charbonnel !",
+    "subtitle": "Mechatronics, Automation and Robotics student at Grenoble INP - Ense3"
   },
   "contact": {
     "title": "Get in touch!",

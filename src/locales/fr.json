@@ -6,7 +6,8 @@
     "contact": "Contact"
   },
   "home": {
-    "title": "Salut, je m'appelle Clément Charbonnel !"
+    "title": "Salut, je m'appelle Clément Charbonnel !",
+    "subtitle": "Étudiant en mécatronique, automatique et robotique à Grenoble INP - Ense3"
   },
   "contact": {
     "title": "Contactez-moi !",
