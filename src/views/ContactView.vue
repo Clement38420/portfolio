@@ -120,11 +120,11 @@ import BaseCard from '@/components/BaseCard.vue'
 }
 
 .email-card:hover {
-  box-shadow: 0 20px 40px rgba(107, 114, 128, 0.3);
+  box-shadow: 0 20px 40px rgba(242, 66, 54, 0.3);
 }
 
 .github-card:hover {
-  box-shadow: 0 20px 40px rgba(189, 109, 253, 0.4);
+  box-shadow: 0 20px 40px rgba(189, 109, 253, 0.3);
 }
 
 .card-content {
