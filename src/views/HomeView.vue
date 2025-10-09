@@ -3,7 +3,7 @@ import HomeBubbles from '@/components/HomeBubbles.vue'
 </script>
 
 <template>
-  <h2>{{ $t('messages.heading') }}</h2>
+  <h2>{{ $t('home.title') }}</h2>
   <HomeBubbles></HomeBubbles>
   <div class="animated-background"></div>
 </template>

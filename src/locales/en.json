@@ -5,7 +5,7 @@
     "projects": "Projects",
     "contact": "Contact"
   },
-  "messages": {
-    "heading": "Hi, I'm Clément Charbonnel !"
+  "home": {
+    "title": "Hi, I'm Clément Charbonnel !"
   }
 }
