@@ -16,7 +16,7 @@ import BaseCard from '@/components/BaseCard.vue'
           target="_blank"
           rel="noopener"
         >
-          <img src="@/assets/images/linkedin.svg" alt="LinkedIn" class="icon" />
+          <img src="@/assets/images/linkedin.svg" class="icon" alt="" />
           <div class="text-content">
             <span class="text linkedin">LinkedIn</span>
             <span class="subtitle">{{ $t('contact.linkedin.subtitle') }}</span>
@@ -27,10 +27,21 @@ import BaseCard from '@/components/BaseCard.vue'
 
       <BaseCard class="contact-card email-card">
         <a href="mailto:c.charbo38@gmail.com" class="card-content">
-          <img src="@/assets/images/mail.svg" alt="Email" class="icon" />
+          <img src="@/assets/images/mail.svg" class="icon" alt="" />
           <div class="text-content">
             <span class="text mail">Mail</span>
             <span class="subtitle">{{ $t('contact.email.subtitle') }}</span>
+          </div>
+          <img class="arrow" src="@/assets/images/corner-arrow.svg" alt="" />
+        </a>
+      </BaseCard>
+
+      <BaseCard class="contact-card github-card">
+        <a href="https://github.com/Clement38420" class="card-content">
+          <img src="@/assets/images/github.svg" class="icon" alt="" />
+          <div class="text-content">
+            <span class="text mail">GitHub</span>
+            <span class="subtitle">{{ $t('contact.github.subtitle') }}</span>
           </div>
           <img class="arrow" src="@/assets/images/corner-arrow.svg" alt="" />
         </a>
@@ -110,6 +121,10 @@ import BaseCard from '@/components/BaseCard.vue'
 
 .email-card:hover {
   box-shadow: 0 20px 40px rgba(107, 114, 128, 0.3);
+}
+
+.github-card:hover {
+  box-shadow: 0 20px 40px rgba(189, 109, 253, 0.4);
 }
 
 .card-content {

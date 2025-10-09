@@ -16,6 +16,9 @@
     "email": {
       "subtitle": "Contactez-moi par mail"
     },
+    "github": {
+      "subtitle": "Voir mes projets"
+    },
     "footerNote": "Je suis actuellement à la recherche d'un stage en robotique pour l'été 2025 !"
   }
 }
