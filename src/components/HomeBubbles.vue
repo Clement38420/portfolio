@@ -2,35 +2,37 @@
 import { computed, onMounted, useTemplateRef } from 'vue'
 import type { Position } from '@/types'
 import { Bubble } from '@/classes'
+import { drawBubble, getCanvasMousePosition, getRandomCoordinatesInCanvas } from '@/utils'
 
-const NUMBER_OF_BUBBLES = 200
+const bubblesCanvas = useTemplateRef('bubbles-canvas')
+
+const NUMBER_OF_BUBBLES = 300
 let bubbles = Array<Bubble>(NUMBER_OF_BUBBLES)
 
 let time = 0
 
-const bubblesCanvas = useTemplateRef('bubbles-canvas')
+let isMouseAttracting = false
+document.addEventListener('mouseout', () => (isMouseAttracting = false))
+let mousePosition: Position = { x: 0, y: 0 }
+document.addEventListener('mousemove', (event) => {
+  isMouseAttracting = true
 
-function getRandomCoordinatesInCanvas(): Position {
-  if (!bubblesCanvas.value) return { x: 0, y: 0 }
-  return {
-    x: Math.random() * bubblesCanvas.value.width,
-    y: Math.random() * bubblesCanvas.value.height,
+  if (!bubblesCanvas.value) {
+    return mousePosition
   }
-}
 
-function drawBubble(ctx: CanvasRenderingContext2D, bubble: Bubble) {
-  ctx.beginPath()
-  ctx.arc(bubble.position.x, bubble.position.y, bubble.radius, 0, Math.PI * 2, true)
-  ctx.fillStyle = `hsla(${bubble.color.h}, ${bubble.color.s}%, ${bubble.color.l}%, ${bubble.color.a})`
-  ctx.fill()
-}
+  mousePosition = getCanvasMousePosition(
+    { x: event.clientX, y: event.clientY },
+    bubblesCanvas.value,
+  )
+})
 
 function render() {
   const ctx = bubblesCanvas.value?.getContext('2d')
   if (ctx) {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
     bubbles.forEach((bubble) => {
-      bubble.update(time, ctx.canvas.width, ctx.canvas.height)
+      bubble.update(time, ctx.canvas.width, ctx.canvas.height, mousePosition, isMouseAttracting)
       drawBubble(ctx, bubble)
     })
   }
@@ -42,7 +44,7 @@ function render() {
 onMounted(() => {
   bubbles = Array.from(
     { length: NUMBER_OF_BUBBLES },
-    () => new Bubble(getRandomCoordinatesInCanvas()),
+    () => new Bubble(getRandomCoordinatesInCanvas(bubblesCanvas.value as HTMLCanvasElement)),
   )
 
   render()
@@ -70,7 +72,7 @@ canvas#bubbles {
   position: fixed;
   inset: 70px 0 0 0;
   width: 100vw;
-  height: calc(100vh - 70px);
+  height: 100%;
   object-fit: cover;
   z-index: -1;
   pointer-events: none;
