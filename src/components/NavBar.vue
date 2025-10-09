@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+
 const { locale } = useI18n()
+const route = useRoute()
 
 function toggleLanguage() {
   locale.value = locale.value === 'en' ? 'fr' : 'en'
@@ -12,23 +15,27 @@ const toLanguage = computed(() => (locale.value === 'en' ? 'fr' : 'en'))
 const languageImage = computed(() => {
   return new URL(`../assets/images/${toLanguage.value}.svg`, import.meta.url).href
 })
+
+const navLinks = [
+  { name: 'nav.home', path: '/' },
+  { name: 'nav.about', path: '/about' },
+  { name: 'nav.projects', path: '/projects' },
+  { name: 'nav.contact', path: '/contact' },
+]
+
+const isActiveLink = (path: string) => {
+  return route.path === path
+}
 </script>
 
 <template>
   <nav>
     <h1>Clément Charbonnel</h1>
     <ul class="navbar-items">
-      <li class="navbar-item">
-        <RouterLink class="view-link" to="/">{{ $t('nav.home') }}</RouterLink>
-      </li>
-      <li class="navbar-item">
-        <RouterLink class="view-link" to="/about">{{ $t('nav.about') }}</RouterLink>
-      </li>
-      <li class="navbar-item">
-        <RouterLink class="view-link" to="/projects">{{ $t('nav.projects') }}</RouterLink>
-      </li>
-      <li class="navbar-item">
-        <RouterLink class="view-link" to="/contact">{{ $t('nav.contact') }}</RouterLink>
+      <li v-for="link in navLinks" :key="link.path" class="navbar-item">
+        <RouterLink class="view-link" :class="{ active: isActiveLink(link.path) }" :to="link.path">
+          {{ $t(link.name) }}
+        </RouterLink>
       </li>
     </ul>
     <button class="language-switch" @click="toggleLanguage">
@@ -71,14 +78,46 @@ h1 {
   text-decoration: none;
   text-transform: uppercase;
   padding: 12px;
-  transition: 0.1s background-color;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
 .view-link:hover {
-  background-color: var(--bg-color);
-  border-radius: 8px;
+  color: #3b82f6;
+  transform: translateY(-1px);
+  text-shadow: 0 0 0.5px #3b82f6;
 }
 
+.view-link::after {
+  content: '';
+  background: #3b82f6;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 60%;
+  height: 2px;
+  border-radius: 1px;
+  transform-origin: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 2px rgba(59, 130, 246, 0.15);
+}
+
+.view-link:hover::after,
+.view-link.active::after {
+  transform: translateX(-50%) scaleX(1);
+  box-shadow: 0 1px 3px rgba(59, 130, 246, 0.2);
+}
+
+.view-link.active {
+  color: #3b82f6;
+  text-shadow: 0 0 1px #3b82f6;
+}
+
+.view-link.active::after {
+  background: #3b82f6;
+}
 .language-switch {
   position: absolute;
   right: 16px;
