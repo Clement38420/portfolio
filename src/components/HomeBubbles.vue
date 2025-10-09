@@ -11,6 +11,7 @@ let bubbles = Array<Bubble>(NUMBER_OF_BUBBLES)
 
 let time = 0
 
+// Mouse attraction
 let isMouseAttracting = false
 document.addEventListener('mouseout', () => (isMouseAttracting = false))
 let mousePosition: Position = { x: 0, y: 0 }
@@ -25,6 +26,17 @@ document.addEventListener('mousemove', (event) => {
     { x: event.clientX, y: event.clientY },
     bubblesCanvas.value,
   )
+})
+
+// Mouse explosion
+document.addEventListener('click', () => {
+  if (!bubblesCanvas.value) {
+    return
+  }
+
+  bubbles.forEach((bubble) => {
+    bubble.explode(mousePosition)
+  })
 })
 
 function render() {

@@ -4,6 +4,7 @@ import { gaussianCurve } from '@/utils'
 
 const MOUSE_INFLUENCE_RADIUS = 300
 const MOUSE_ATTRACTION_STRENGTH = 0.6
+const EXPLOSION_STRENGTH = 0.7
 
 export class Bubble {
   public position: Position
@@ -56,6 +57,19 @@ export class Bubble {
     return {
       x: normalizedX * force,
       y: normalizedY * force,
+    }
+  }
+
+  public explode(mousePosition: Position): void {
+    const dx = this.position.x - mousePosition.x
+    const dy = this.position.y - mousePosition.y
+    const distance = Math.sqrt(dx * dx + dy * dy)
+
+    if (distance < MOUSE_INFLUENCE_RADIUS) {
+      const angle = Math.atan2(dy, dx)
+      const force = (100 - distance) * EXPLOSION_STRENGTH * 0.1
+      this.velocity.x += Math.cos(angle) * force * 5
+      this.velocity.y += Math.sin(angle) * force * 5
     }
   }
 
