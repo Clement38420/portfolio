@@ -5,6 +5,7 @@ import HomeBubbles from '@/components/HomeBubbles.vue'
 <template>
   <h2>{{ $t('messages.heading') }}</h2>
   <HomeBubbles></HomeBubbles>
+  <div class="animated-background"></div>
 </template>
 
 <style scoped>
@@ -46,6 +47,33 @@ h2 {
   100% {
     opacity: 1;
     transform: translate(-50%, -50%);
+  }
+}
+
+.animated-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    rgba(59, 130, 246, 0.1),
+    rgba(147, 51, 234, 0.08),
+    rgba(236, 72, 153, 0.1),
+    rgba(59, 130, 246, 0.7)
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 25% 50%;
+  }
+  50% {
+    background-position: 75% 50%;
+  }
+  100% {
+    background-position: 25% 50%;
   }
 }
 </style>

@@ -22,7 +22,7 @@ import NavBar from './components/NavBar.vue'
 }
 
 :root {
-  --bg-color: hsl(210, 80%, 95%);
+  --bg-color: hsl(0, 0%, 95%);
   --bg-light-color: hsl(0, 0%, 100%);
   --bg-dark-color: hsl(0, 0%, 90%);
 
