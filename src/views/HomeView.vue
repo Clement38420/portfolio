@@ -30,6 +30,11 @@ h2 {
   transform: translate(-50%, -50%);
   animation: 1s ease-out 0.1s fadein;
   animation-fill-mode: both;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 @keyframes fadein {
