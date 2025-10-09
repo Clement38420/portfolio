@@ -128,15 +128,19 @@ h1 {
   border: none;
   padding: 0;
   cursor: pointer;
-  transition: 0.1s box-shadow;
+  transition:
+    0.1s box-shadow,
+    0.1s transform;
 }
 
 .language-switch:hover {
   box-shadow: var(--card-shadow);
+  transform: translateY(-55%) scale(1.05);
 }
 
 .language-switch:active {
   box-shadow: var(--card-shadow-close);
+  transform: translateY(-50%) scale(1);
 }
 
 .language-switch img {
