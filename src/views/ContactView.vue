@@ -3,6 +3,7 @@ import BaseCard from '@/components/BaseCard.vue'
 </script>
 
 <template>
+  <div class="view-background"></div>
   <div class="contact-page">
     <div class="contact-hero">
       <h2 class="contact-title">{{ $t('contact.title') }}</h2>
@@ -63,9 +64,6 @@ import BaseCard from '@/components/BaseCard.vue'
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background:
-    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.08) 0%, transparent 50%);
 }
 
 .contact-hero {

@@ -39,4 +39,13 @@ body {
   font-family: Calibri, sans-serif;
   color: var(--text-color);
 }
+
+.view-background {
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh - 70px);
+  background:
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.08) 0%, transparent 50%);
+}
 </style>
