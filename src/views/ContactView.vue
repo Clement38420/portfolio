@@ -115,15 +115,15 @@ import BaseCard from '@/components/BaseCard.vue'
 }
 
 .linkedin-card:hover {
-  box-shadow: 0 20px 40px rgba(16, 71, 163, 0.3);
+  box-shadow: 0 20px 40px rgba(16, 71, 163, 0.3) !important;
 }
 
 .email-card:hover {
-  box-shadow: 0 20px 40px rgba(242, 66, 54, 0.3);
+  box-shadow: 0 20px 40px rgba(242, 66, 54, 0.3) !important;
 }
 
 .github-card:hover {
-  box-shadow: 0 20px 40px rgba(189, 109, 253, 0.3);
+  box-shadow: 0 20px 40px rgba(189, 109, 253, 0.3) !important;
 }
 
 .card-content {

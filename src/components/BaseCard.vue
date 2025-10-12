@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{
+  noHover?: boolean
+}>()
+</script>
 
 <template>
-  <div class="card">
+  <div class="card" :class="{ 'no-hover': noHover }">
     <div class="highlight"></div>
     <div class="content"><slot></slot></div>
   </div>
@@ -29,7 +33,7 @@
   height: 28px;
 }
 
-.card:hover {
+.card:not(.no-hover):hover {
   box-shadow: var(--card-shadow-high);
   transform: translateY(-12px) scale(1.02);
 }
@@ -42,12 +46,12 @@
   height: 24px;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
-  background: linear-gradient(0, var(--bg-color), var(--bg-light-color));
+  background: linear-gradient(0, var(--bg-color), 80%, var(--bg-light-color));
   transform-origin: top center;
   transition: height 0.2s ease;
 }
 
-.card:hover .highlight {
+.card:not(.no-hover):hover .highlight {
   height: 70%;
 }
 
