@@ -52,7 +52,9 @@ nav {
   box-shadow: var(--card-shadow);
   display: flex;
   justify-content: space-around;
-  position: relative;
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
 }
 
 nav * {
