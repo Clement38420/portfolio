@@ -3,7 +3,7 @@ import { onMounted, useTemplateRef } from 'vue'
 import { computeDistance } from '@/utils'
 
 const card = useTemplateRef('card')
-const reflection = useTemplateRef('reflection')
+const shine = useTemplateRef('shine')
 
 onMounted(() => {
   if (card.value) {
@@ -22,10 +22,10 @@ onMounted(() => {
       if (card.value)
         card.value.style.transform = `perspective(500px) rotate3d(${rotateX}, ${rotateY}, 0, ${intensity}deg)`
 
-      if (reflection.value) {
-        reflection.value.style.opacity = `min(${intensity}, 1)`
-        reflection.value.style.top = `${y}px`
-        reflection.value.style.left = `${x}px`
+      if (shine.value) {
+        const angle = (Math.atan2(y - centerY, x - centerX) * 180) / Math.PI - 90
+        shine.value.style.background = `linear-gradient(${angle}deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.08) 60%, transparent 100%)`
+        shine.value.style.opacity = Math.min(intensity * 1.1, 0.45).toString()
       }
     })
 
@@ -38,10 +38,10 @@ onMounted(() => {
 
 <template>
   <div class="card" ref="card">
+    <div class="shine" ref="shine"></div>
     <div class="content">
       <slot></slot>
     </div>
-    <div class="reflection" ref="reflection"></div>
   </div>
 </template>
 
@@ -62,18 +62,16 @@ onMounted(() => {
   box-shadow: var(--card-shadow-high);
 }
 
-.reflection {
-  width: 0;
-  height: 0;
+.shine {
+  transform: scale(1.03);
+  pointer-events: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  box-shadow: 0 0 60px 10px white;
-  z-index: 10;
+  inset: 0;
+  border-radius: inherit;
+  z-index: 12;
   opacity: 0;
-}
-
-.card:hover .reflection {
-  opacity: 1;
+  transition:
+    opacity 0.2s,
+    background 0.2s;
 }
 </style>
