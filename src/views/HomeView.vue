@@ -86,13 +86,15 @@ h3 {
   z-index: -1;
   background: linear-gradient(
     45deg,
-    rgba(59, 130, 246, 0.1),
-    rgba(147, 51, 234, 0.08),
-    rgba(236, 72, 153, 0.1),
-    rgba(59, 130, 246, 0.7)
+    rgba(96, 165, 250, 0.15),
+    rgba(59, 130, 246, 0.18),
+    rgba(37, 99, 235, 0.12),
+    rgba(29, 78, 216, 0.2),
+    rgba(99, 102, 241, 0.16),
+    rgba(139, 92, 246, 0.14)
   );
   background-size: 400% 400%;
-  animation: gradientShift 10s ease infinite;
+  animation: gradientShift 8s ease infinite;
 }
 
 .ense3-link {
