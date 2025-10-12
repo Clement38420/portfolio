@@ -23,7 +23,7 @@
     "footerNote": "Je suis actuellement à la recherche d'un stage en robotique pour l'été 2025 !"
   },
   "about": {
-    "title": "A propos de moi",
+    "title": "À propos de moi",
     "description": "Je m'appelle Clément Charbonnel, j'ai 21 ans et je suis étudiant en 2ème année d'école d'ingénieur à {ense3-link}. Mes études se concentrent sur la mécatronique, l'automatique, et la robotique. En dehors de mes études, je suis passionné par la mécanique, le bricolage, l'informatique et le sport. Grâce à mes passions, j'adore me lancer dans de nouveaux {projects-link} pour développer mes compétences et apprendre de nouvelles choses. Mais j'ai toujours besoin d'un peu de tennis, de rugby ou de vélo pour me détendre !"
   }
 }
