@@ -9,6 +9,10 @@
     "title": "Hi, I'm Clément Charbonnel !",
     "subtitle": "Mechatronics, Automation and Robotics student at"
   },
+  "about": {
+    "title": "About me",
+    "description": "My name is Clément Charbonnel, I am 21 years old and a second-year engineering student at {ense3-link}. My studies focus on mechatronics, automation, and robotics. Outside of my studies, I am passionate about mechanics, DIY, computer science, and sports. Thanks to my passions, I love starting new {projects-link} to develop my skills and learn new things. But I always need a bit of tennis, rugby, or cycling to relax!"
+  },
   "contact": {
     "title": "Get in touch!",
     "linkedin": {
