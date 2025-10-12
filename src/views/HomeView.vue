@@ -52,7 +52,7 @@ h2 {
   filter: drop-shadow(0 4px 12px rgba(96, 165, 250, 0.3))
     drop-shadow(0 0 20px rgba(96, 165, 250, 0.2));
   text-shadow: 0 0 6px hsla(224, 76%, 48%, 0.3);
-  animation: 0.7s ease-out 0.1s fadein;
+  animation: 0.7s ease-out 0.1s fadeInUp;
   animation-fill-mode: both;
 }
 
@@ -64,20 +64,8 @@ h3 {
   letter-spacing: -0.02em;
   max-width: 700px;
   color: rgba(55, 65, 81, 0.83);
-  animation: 0.7s ease-out 0.3s fadein;
+  animation: 0.7s ease-out 0.3s fadeInUp;
   animation-fill-mode: both;
-}
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-    transform: translate(0, 20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
 }
 
 .animated-background {

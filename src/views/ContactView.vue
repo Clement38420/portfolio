@@ -97,7 +97,8 @@ import BaseCard from '@/components/BaseCard.vue'
   height: 4px;
   background: linear-gradient(90deg, #3b82f6, #1d4ed8);
   border-radius: 2px;
-  animation: slideIn 0.8s ease-out 0.5s both;
+  transform-origin: center;
+  animation: grow 0.8s ease-out 0.5s both;
 }
 
 .links {
@@ -217,23 +218,12 @@ import BaseCard from '@/components/BaseCard.vue'
   margin-top: -2px;
 }
 
-@keyframes fadeInUp {
+@keyframes grow {
   0% {
-    opacity: 0;
-    transform: translateY(30px);
+    transform: translateX(-50%) scaleX(0);
   }
   100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 80px;
+    transform: translateX(-50%) scaleX(1);
   }
 }
 </style>
