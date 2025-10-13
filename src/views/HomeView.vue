@@ -4,7 +4,7 @@ import HomeBubbles from '@/components/HomeBubbles.vue'
 
 <template>
   <div class="titles">
-    <h2>{{ $t('home.title') }}</h2>
+    <h2 class="title">{{ $t('home.title') }}</h2>
     <h3>
       {{ $t('home.subtitle') }}
       <a class="ense3-link" href="https://ense3.grenoble-inp.fr/" target="_blank" rel="noopener">
@@ -40,15 +40,7 @@ import HomeBubbles from '@/components/HomeBubbles.vue'
 }
 
 h2 {
-  font-family: 'Inter', sans-serif;
   font-size: clamp(2.5rem, 8vw, 6rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 30%, #2563eb 70%, #1d4ed8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   filter: drop-shadow(0 4px 12px rgba(96, 165, 250, 0.3))
     drop-shadow(0 0 20px rgba(96, 165, 250, 0.2));
   text-shadow: 0 0 6px hsla(224, 76%, 48%, 0.3);

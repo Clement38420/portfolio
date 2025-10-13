@@ -6,7 +6,7 @@ import BaseCard from '@/components/BaseCard.vue'
   <div class="view-background"></div>
   <div class="contact-page">
     <div class="contact-hero">
-      <h2 class="contact-title">{{ $t('contact.title') }}</h2>
+      <h2 class="title contact-title">{{ $t('contact.title') }}</h2>
     </div>
 
     <div class="links">
@@ -73,15 +73,6 @@ import BaseCard from '@/components/BaseCard.vue'
 }
 
 .contact-title {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(3rem, 8vw, 5rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 30%, #2563eb 70%, #1d4ed8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   filter: drop-shadow(0 4px 20px rgba(96, 165, 250, 0.3));
   margin: 0 0 1rem 0;
   position: relative;

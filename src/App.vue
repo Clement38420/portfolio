@@ -48,6 +48,20 @@ body {
     radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%);
 }
 
+.title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #4a96f6 0%, #3b82f6 30%, #2563eb 70%, #1d4ed8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 80px;
+  width: fit-content;
+}
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
