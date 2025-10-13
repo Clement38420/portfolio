@@ -31,6 +31,7 @@ onMounted(() => {
 
     card.value.addEventListener('mouseleave', () => {
       if (card.value) card.value.style.transform = 'unset'
+      if (shine.value) shine.value.style.opacity = '0'
     })
   }
 })
