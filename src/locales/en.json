@@ -11,7 +11,34 @@
   },
   "about": {
     "title": "About me",
-    "description": "My name is Clément Charbonnel, I am 21 years old and a second-year engineering student at {ense3-link}. My studies focus on mechatronics, automation, and robotics. Outside of my studies, I am passionate about mechanics, DIY, computer science, and sports. Thanks to my passions, I love starting new {projects-link} to develop my skills and learn new things. But I always need a bit of tennis, rugby, or cycling to relax!"
+    "description": "My name is Clément Charbonnel, I am 21 years old and a second-year engineering student at {ense3-link}. My studies focus on mechatronics, automation, and robotics. Outside of the school, I am passionate about mechanics, DIY, computer science, and sports. Thanks to my passions, I love starting new {projects-link} to develop my skills and learn new things. But I always need a bit of tennis, rugby, or cycling to relax!",
+    "skills": {
+      "title": "My skills",
+      "categories": {
+        "programming": "Programming",
+        "robotics": "Robotics",
+        "cad": "CAD",
+        "softSkills": "Soft Skills",
+        "diy": "DIY"
+      },
+      "items": {
+        "automation": "Automation",
+        "signalProcessing": "Signal Processing",
+        "webDevelopment": "Web Development",
+        "python": "Python",
+        "matlab": "Matlab",
+        "cppArduino": "C/C++/Arduino",
+        "arcWelding": "Arc Welding",
+        "woodWork": "Wood work",
+        "metalWork": "Metal work",
+        "electronics": "Electronics",
+        "3dPrinting": "3D Printing",
+        "solidworks": "SolidWorks",
+        "teamwork": "Teamwork",
+        "sociability": "Sociability",
+        "problemSolving": "Problem Solving"
+      }
+    }
   },
   "contact": {
     "title": "Get in touch!",

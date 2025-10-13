@@ -24,6 +24,33 @@
   },
   "about": {
     "title": "À propos de moi",
-    "description": "Je m'appelle Clément Charbonnel, j'ai 21 ans et je suis étudiant en 2ème année d'école d'ingénieur à {ense3-link}. Mes études se concentrent sur la mécatronique, l'automatique, et la robotique. En dehors de mes études, je suis passionné par la mécanique, le bricolage, l'informatique et le sport. Grâce à mes passions, j'adore me lancer dans de nouveaux {projects-link} pour développer mes compétences et apprendre de nouvelles choses. Mais j'ai toujours besoin d'un peu de tennis, de rugby ou de vélo pour me détendre !"
+    "description": "Je m'appelle Clément Charbonnel, j'ai 21 ans et je suis étudiant en 2ème année d'école d'ingénieur à {ense3-link}. Mes études se concentrent sur la mécatronique, l'automatique, et la robotique. En dehors de l'école, je suis passionné par la mécanique, le bricolage, l'informatique et le sport. Grâce à mes passions, j'adore me lancer dans de nouveaux {projects-link} pour développer mes compétences et apprendre de nouvelles choses. Mais j'ai toujours besoin d'un peu de tennis, de rugby ou de vélo pour me détendre !",
+    "skills": {
+      "title": "Mes compétences",
+      "categories": {
+        "programming": "Programmation",
+        "robotics": "Robotique",
+        "cad": "CAO",
+        "softSkills": "Qualités personnelles",
+        "diy": "Bricolage"
+      },
+      "items": {
+        "automation": "Automatisation",
+        "signalProcessing": "Traitement du signal",
+        "webDevelopment": "Développement web",
+        "python": "Python",
+        "matlab": "Matlab",
+        "cppArduino": "C/C++/Arduino",
+        "arcWelding": "Soudure à l'arc",
+        "woodWork": "Travail du bois",
+        "metalWork": "Travail du métal",
+        "electronics": "Électronique",
+        "3dPrinting": "Impression 3D",
+        "solidworks": "SolidWorks",
+        "teamwork": "Travail d'équipe",
+        "sociability": "Sociabilité",
+        "problemSolving": "Résolution de problèmes"
+      }
+    }
   }
 }
