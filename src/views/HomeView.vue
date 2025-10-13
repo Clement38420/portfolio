@@ -46,6 +46,7 @@ h2 {
   text-shadow: 0 0 6px hsla(224, 76%, 48%, 0.3);
   animation: 0.7s ease-out 0.1s fadeInUp;
   animation-fill-mode: both;
+  margin: 0;
 }
 
 h3 {
