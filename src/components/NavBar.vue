@@ -131,13 +131,6 @@ h1 {
   flex: 1;
 }
 
-.navbar-items {
-  display: none;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-  gap: 0;
-}
-
 .navbar-items.show {
   display: flex !important;
 }
@@ -201,7 +194,7 @@ h1 {
 @media (hover: hover) {
   .language-switch:hover {
     box-shadow: var(--card-shadow);
-    transform: translateY(-55%) scale(1.05);
+    transform: translateY(-20%) scale(1.05);
   }
 }
 
