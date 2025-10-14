@@ -60,6 +60,7 @@ body {
   background-clip: text;
   margin-bottom: 80px;
   width: fit-content;
+  padding-bottom: 0.05em;
 }
 
 @keyframes fadeInUp {
