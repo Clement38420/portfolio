@@ -218,34 +218,35 @@ onMounted(() => {
 }
 
 .about-view {
-  padding: 128px;
+  padding: 70px clamp(12px, 10vw, 128px);
 }
 
 .hero {
   --portrait-width: 500px;
   --header-height: max(60vh, 500px);
 
-  margin-top: 70px;
   position: relative;
+  top: calc(50vh - 70px);
+  translate: 0 -50%;
   animation: fadeInUp 0.8s ease-out;
+  display: flex;
+  padding: 64px 0;
 }
 
 .hero-card {
   width: 100%;
   position: relative;
-  top: 50px;
-  height: calc(var(--header-height) - 100px);
+  padding: clamp(12px, 10%, 64px);
   padding-right: var(--portrait-width);
-  padding-bottom: 50px;
 }
 
 .portrait-card {
+  align-self: center;
   width: var(--portrait-width);
-  height: var(--header-height);
+  aspect-ratio: 0.9 / 1;
   border-radius: 15px;
   position: absolute;
   right: 0;
-  top: 0;
   z-index: 1;
 }
 
@@ -302,10 +303,15 @@ onMounted(() => {
 }
 
 .section2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 64px;
-  margin-top: 256px;
+  margin-top: 350px;
+  flex-wrap: wrap;
+}
+
+.section2 > .section-card {
+  flex: 1 1 600px;
+  padding: clamp(12px, 10%, 64px);
 }
 
 .skills {
@@ -482,5 +488,52 @@ onMounted(() => {
   background: linear-gradient(to top, var(--bg-dark-color), transparent);
   pointer-events: none;
   z-index: 100;
+}
+
+@media (1200px < width < 1500px) {
+  .hero-card {
+    padding-right: clamp(12px, 10%, 64px);
+  }
+
+  .description {
+    margin-right: 0;
+  }
+
+  .about-title {
+    margin-right: calc(var(--portrait-width) - 64px);
+  }
+
+  .portrait-card {
+    top: -270px;
+    right: -24px;
+  }
+
+  .hero {
+    margin-top: 350px;
+    top: calc(50vh - 70px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-card {
+    padding-top: 64px;
+    padding-right: clamp(12px, 10%, 64px);
+  }
+
+  .description {
+    margin-right: 0;
+  }
+
+  .portrait-card {
+    bottom: 85%;
+    right: 50%;
+    translate: 50% 0;
+    width: min(60vw, var(--portrait-width));
+  }
+
+  .hero {
+    margin-top: min(60vw, var(--portrait-width));
+    top: calc(50vh - 70px);
+  }
 }
 </style>
