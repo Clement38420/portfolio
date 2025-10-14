@@ -7,9 +7,9 @@ const shine = useTemplateRef('shine')
 
 onMounted(() => {
   if (card.value) {
-    const rect = card.value.getBoundingClientRect()
-
     card.value.addEventListener('mousemove', (e) => {
+      const rect = card.value.getBoundingClientRect()
+
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
       const centerX = rect.width / 2
