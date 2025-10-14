@@ -26,14 +26,49 @@ const navLinks = [
 const isActiveLink = (path: string) => {
   return route.path === path
 }
+
+function toggleNavBarItems() {
+  const navbarItems = document.querySelector('.navbar-items') as HTMLElement
+  const title = document.querySelector('h1') as HTMLElement
+
+  if (navbarItems.classList.contains('show')) {
+    hideNavBarItems()
+  } else {
+    title.style.display = 'none'
+    navbarItems.classList.add('show')
+    setTimeout(() => {
+      navbarItems.style.transform = 'scaleX(1)'
+    }, 10)
+  }
+}
+
+function hideNavBarItems() {
+  const navbarItems = document.querySelector('.navbar-items') as HTMLElement
+  const title = document.querySelector('h1') as HTMLElement
+  if (window.innerWidth <= 768) {
+    navbarItems.style.transform = 'scaleX(0)'
+    setTimeout(() => {
+      navbarItems.classList.remove('show')
+      title.style.display = 'block'
+    }, 300)
+  }
+}
 </script>
 
 <template>
   <nav>
+    <button class="nav-menu" @click="toggleNavBarItems">
+      <img src="@/assets/images/menu.svg" alt="menu" />
+    </button>
     <h1>Clément Charbonnel</h1>
     <ul class="navbar-items">
       <li v-for="link in navLinks" :key="link.path" class="navbar-item">
-        <RouterLink class="view-link" :class="{ active: isActiveLink(link.path) }" :to="link.path">
+        <RouterLink
+          class="view-link"
+          :class="{ active: isActiveLink(link.path) }"
+          :to="link.path"
+          @click="hideNavBarItems"
+        >
           {{ $t(link.name) }}
         </RouterLink>
       </li>
@@ -51,28 +86,60 @@ nav {
   background-color: var(--bg-light-color);
   box-shadow: var(--card-shadow);
   display: flex;
-  justify-content: space-around;
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 1000;
+  padding: 0 16px;
 }
 
 nav * {
   margin: auto 0;
 }
 
+.nav-menu {
+  background: none;
+  border: none;
+  padding: 0;
+  display: none;
+  width: 2em;
+  height: 2em;
+  transform-origin: center;
+  transition: transform 0.1s;
+}
+
+.nav-menu img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.nav-menu:hover {
+  transform: scaleY(1.3);
+}
+
 h1 {
-  position: absolute;
-  left: 16px;
-  font-size: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
+  font-size: 1.5rem;
+  justify-self: start;
 }
 
 .navbar-items {
+  padding: 0;
   display: flex;
   gap: 16px;
   list-style: none;
+  justify-content: center;
+  flex: 1;
+}
+
+.navbar-items {
+  display: none;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  gap: 0;
+}
+
+.navbar-items.show {
+  display: flex !important;
 }
 
 .view-link {
@@ -121,11 +188,7 @@ h1 {
   background: #3b82f6;
 }
 .language-switch {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1.5em;
+  width: 2em;
   background: none;
   border: none;
   padding: 0;
@@ -135,9 +198,11 @@ h1 {
     0.1s transform;
 }
 
-.language-switch:hover {
-  box-shadow: var(--card-shadow);
-  transform: translateY(-55%) scale(1.05);
+@media (hover: hover) {
+  .language-switch:hover {
+    box-shadow: var(--card-shadow);
+    transform: translateY(-55%) scale(1.05);
+  }
 }
 
 .language-switch:active {
@@ -150,5 +215,31 @@ h1 {
   height: 100%;
   object-fit: contain;
   border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  .nav-menu {
+    display: block;
+  }
+
+  .navbar-items {
+    display: none;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    gap: 0;
+    transform-origin: left;
+  }
+
+  .navbar-items.show {
+    display: flex !important;
+  }
+
+  .view-link {
+    padding: 12px 4px;
+  }
 }
 </style>
