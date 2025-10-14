@@ -58,9 +58,11 @@ onMounted(() => {
     box-shadow 0.3s;
 }
 
-.content:hover {
-  transform: scale(1.03);
-  box-shadow: var(--card-shadow-high);
+@media (hover: hover) {
+  .content:hover {
+    transform: scale(1.03);
+    box-shadow: var(--card-shadow-high);
+  }
 }
 
 .shine {
