@@ -49,8 +49,14 @@
         "solidworks": "SolidWorks",
         "teamwork": "Travail d'équipe",
         "sociability": "Sociabilité",
-        "problemSolving": "Résolution de problèmes"
+        "problemSolving": "Résolution de problèmes",
+        "mechatronics": "Mécatronique"
       }
+    },
+    "studies": {
+      "title": "Mon parcours",
+      "ense3": "Diplôme d'ingénieur dans la filière Automatique et Systèmes Intelligents (ASI). Spécialisé en mécatronique, automatique, électronique, traitement du signal.",
+      "cpge": "Classe préparatoire aux grandes écoles (CPGE) spécialisée en Maths, Physique et Sciences de l'ingénieur (PCSI/PSI). "
     }
   }
 }

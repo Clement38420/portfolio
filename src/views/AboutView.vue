@@ -24,6 +24,7 @@ const skills = [
   skill('about.skills.items.cppArduino', Programming),
   skill('about.skills.items.automation', Robotics),
   skill('about.skills.items.signalProcessing', Robotics),
+  skill('about.skills.items.mechatronics', Robotics),
   skill('about.skills.items.arcWelding', DIY),
   skill('about.skills.items.woodWork', DIY),
   skill('about.skills.items.metalWork', DIY),
@@ -54,11 +55,11 @@ function updateScrollAnimations() {
   })
 }
 
-const arrowShowed = ref(true)
+const scrollArrowShowed = ref(window.scrollY <= 600) // Hide arrow if the page is already scrolled down
 
 onMounted(() => {
   document.addEventListener('scroll', updateScrollAnimations)
-  document.addEventListener('scroll', () => (arrowShowed.value = false))
+  document.addEventListener('scroll', () => (scrollArrowShowed.value = false))
   updateScrollAnimations()
 })
 </script>
@@ -94,36 +95,84 @@ onMounted(() => {
       </Base3DCard>
     </div>
 
-    <BaseCard class="section-card skills scroll-animated" no-hover>
-      <h3 class="title skills-title">{{ $t('about.skills.title') }}</h3>
-      <ul class="skills-legend">
-        <li
-          v-for="(color, category) in skillCategoriesColors"
-          :key="category"
-          class="skills-legend-item"
-          :style="{ color: `${color}ff` }"
-        >
-          {{ $t(skillCategoriesTranslation[category]) }}
-        </li>
-      </ul>
+    <div class="section2">
+      <BaseCard class="section-card skills scroll-animated" no-hover>
+        <h3 class="title skills-title">{{ $t('about.skills.title') }}</h3>
+        <ul class="skills-legend">
+          <li
+            v-for="(color, category) in skillCategoriesColors"
+            :key="category"
+            class="skills-legend-item"
+            :style="{ color: `${color}ff` }"
+          >
+            {{ $t(skillCategoriesTranslation[category]) }}
+          </li>
+        </ul>
 
-      <ul class="skills-list">
-        <li
-          v-for="skill in skills"
-          :key="skill.name"
-          class="skill-item"
-          :style="{
-            borderColor: skillCategoriesColors[skill.category],
-            color: skillCategoriesColors[skill.category],
-          }"
-        >
-          {{ $t(skill.name) }}
-        </li>
-      </ul>
-    </BaseCard>
+        <ul class="skills-list">
+          <li
+            v-for="skill in skills"
+            :key="skill.name"
+            class="skill-item"
+            :style="{
+              borderColor: skillCategoriesColors[skill.category],
+              color: skillCategoriesColors[skill.category],
+            }"
+          >
+            {{ $t(skill.name) }}
+          </li>
+        </ul>
+      </BaseCard>
+      <BaseCard class="section-card studies scroll-animated" no-hover>
+        <h3 class="title studies-title">{{ $t('about.studies.title') }}</h3>
+        <div class="content">
+          <svg width="40" height="400" viewBox="0 0 10 100" class="studies-svg">
+            <defs>
+              <linearGradient id="gradientStroke" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#ffffffff" />
+                <stop offset="40%" stop-color="#1d4ed8" />
+                <stop offset="100%" stop-color="#1d4ed8" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M 5 100
+               q -5 -10 0 -20 t 0 -14 t 0 -12
+               a 2 2 0 0 0 0 -4
+               a 2 2 0 0 0 0 4
+               a 2 2 0 0 0 0 -4
+               q 5 -8 0 -10 t 0 -10 t 0 -14 t 0 -10
+               a 2 2 0 0 0 0 -4
+               a 2 2 0 0 0 0 4"
+              stroke="url(#gradientStroke)"
+              fill="transparent"
+              stroke-linecap="round"
+              stroke-width="0.8"
+              stroke-dasharray="131"
+              stroke-dashoffset="131"
+            />
+          </svg>
+          <ul class="studies-list">
+            <li class="studies-item ense3">
+              <h4 class="school">Grenoble INP - Ense3</h4>
+              <p class="dates">2024-2027</p>
+              <p class="description">
+                {{ $t('about.studies.ense3') }}
+              </p>
+            </li>
+            <li class="studies-item cpge">
+              <h4 class="school">Lycée Claude-Louis Berthollet, Annecy</h4>
+              <p class="dates">2022-2024</p>
+              <p class="description">
+                {{ $t('about.studies.cpge') }}
+              </p>
+            </li>
+          </ul>
+        </div>
+      </BaseCard>
+    </div>
 
     <Transition name="down-arrow">
-      <div class="downArrow" v-if="arrowShowed">
+      <div class="downArrow" v-if="scrollArrowShowed">
         <img src="@/assets/images/down-arrow.svg" alt="Scroll down arrow" width="40" height="40" />
       </div>
     </Transition>
@@ -159,6 +208,15 @@ onMounted(() => {
   padding: 4rem;
 }
 
+.scroll-animated *,
+.scroll-animated,
+.scroll-animated::before,
+.scroll-animated::after,
+.scroll-animated *::before,
+.scroll-animated *::after {
+  animation-play-state: paused !important;
+}
+
 .about-view {
   padding: 128px;
 }
@@ -167,6 +225,7 @@ onMounted(() => {
   --portrait-width: 500px;
   --header-height: max(60vh, 500px);
 
+  margin-top: 70px;
   position: relative;
   animation: fadeInUp 0.8s ease-out;
 }
@@ -242,25 +301,24 @@ onMounted(() => {
     brightness(89%) contrast(90%);
 }
 
-.scroll-animated *,
-.scroll-animated,
-.scroll-animated::before,
-.scroll-animated::after,
-.scroll-animated *::before,
-.scroll-animated *::after {
-  animation-play-state: paused !important;
+.section2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-top: 256px;
 }
 
 .skills {
-  width: max(700px, 50%);
-  margin-top: 256px;
   animation: fadeInUp 0.8s ease-out;
+
+  --animation-delay: 0.3s;
 }
 
+.studies-title,
 .skills-title {
   position: relative;
   font-size: clamp(2rem, 5vw, 4rem);
-  animation: fadeInUp 0.6s ease-out 0.3s both;
+  animation: fadeInUp 0.6s ease-out var(--animation-delay) both;
 }
 
 .skills-list {
@@ -270,7 +328,7 @@ onMounted(() => {
   gap: 16px;
   margin-top: 2rem;
   padding: 0;
-  animation: fadeInUp 0.6s ease-out 0.3s both;
+  animation: fadeInUp 0.6s ease-out var(--animation-delay) both;
 }
 
 .skill-item {
@@ -297,7 +355,85 @@ onMounted(() => {
   padding: 0;
   flex-wrap: wrap;
   list-style: inside;
-  animation: fadeInUp 0.6s ease-out 0.3s both;
+  animation: fadeInUp 0.6s ease-out var(--animation-delay) both;
+}
+
+.studies {
+  --animation-delay: 0.6s;
+}
+
+.studies-title {
+  animation-delay: var(--animation-delay);
+}
+
+.studies-title::after {
+  animation-delay: calc(var(--animation-delay) + 0.6s);
+}
+
+.studies {
+  position: relative;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.studies .content {
+  position: relative;
+  display: flex;
+}
+
+.studies-svg {
+  width: 40px;
+  height: 400px;
+  flex: none;
+}
+
+.studies-svg path {
+  animation: drawLine 3s ease-out var(--animation-delay) forwards;
+}
+
+@keyframes drawLine {
+  0% {
+    stroke-dashoffset: 131;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.studies-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 16px;
+}
+
+.studies-item {
+  position: absolute;
+}
+
+.studies-item .dates {
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.studies-item.ense3 {
+  top: 5px;
+  animation: appear 1s ease calc(var(--animation-delay) + 2.3s) both;
+}
+
+.studies-item.cpge {
+  top: 198px;
+  animation: appear 1s ease calc(var(--animation-delay) + 0.8s) both;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .downArrow {

@@ -11,7 +11,7 @@
   },
   "about": {
     "title": "About me",
-    "description": "My name is Clément Charbonnel, I am 21 years old and a second-year engineering student at {ense3-link}. My studies focus on mechatronics, automation, and robotics. Outside of the school, I am passionate about mechanics, DIY, computer science, and sports. Thanks to my passions, I love starting new {projects-link} to develop my skills and learn new things. But I always need a bit of tennis, rugby, or cycling to relax!",
+    "description": "My name is Clément Charbonnel, I am 21 years old and a second-year engineering student at {ense3-link}. My studies focus on mechatronics, automation, and robotics. Outside of school, I am passionate about mechanics, DIY, computer science, and sports. Thanks to my passions, I love starting new {projects-link} to develop my skills and learn new things. But I always need a bit of tennis, rugby, or cycling to relax!",
     "skills": {
       "title": "My skills",
       "categories": {
@@ -36,8 +36,14 @@
         "solidworks": "SolidWorks",
         "teamwork": "Teamwork",
         "sociability": "Sociability",
-        "problemSolving": "Problem Solving"
+        "problemSolving": "Problem Solving",
+        "mechatronics": "Mechatronics"
       }
+    },
+    "studies": {
+      "title": "My academic background",
+      "ense3": "Engineering degree in the Automatic and Intelligent Systems (ASI) track. Specialized in mechatronics, automation, electronics, signal processing.",
+      "cpge": "Preparatory classes for French engineering schools (CPGE) specialized in Mathematics, Physics and Engineering Sciences (PCSI/PSI)."
     }
   },
   "contact": {
