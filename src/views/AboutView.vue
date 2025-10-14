@@ -515,6 +515,14 @@ onMounted(() => {
 }
 
 @media (max-width: 1200px) {
+  .hero {
+    padding-bottom: 0;
+  }
+
+  .section2 {
+    margin-top: 64px;
+  }
+
   .hero-card {
     padding-top: 64px;
     padding-right: clamp(12px, 10%, 64px);
