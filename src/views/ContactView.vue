@@ -4,10 +4,8 @@ import BaseCard from '@/components/BaseCard.vue'
 
 <template>
   <div class="view-background"></div>
-  <div class="contact-page">
-    <div class="contact-hero">
-      <h2 class="title contact-title">{{ $t('contact.title') }}</h2>
-    </div>
+  <div class="contact-view">
+    <h2 class="title contact-title">{{ $t('contact.title') }}</h2>
 
     <div class="links">
       <BaseCard class="contact-card linkedin-card">
@@ -57,25 +55,22 @@ import BaseCard from '@/components/BaseCard.vue'
 </template>
 
 <style scoped>
-.contact-page {
+.contact-view {
   height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
-}
-
-.contact-hero {
-  text-align: center;
-  margin-bottom: 4rem;
-  animation: fadeInUp 0.8s ease-out;
+  padding: 70px 2rem 2rem;
+  min-height: 600px;
 }
 
 .contact-title {
   filter: drop-shadow(0 4px 20px rgba(96, 165, 250, 0.3));
-  margin: 0 0 1rem 0;
   position: relative;
+  text-align: center;
+  margin: 0 0 4rem 0;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .contact-title::after {
@@ -96,6 +91,8 @@ import BaseCard from '@/components/BaseCard.vue'
   display: flex;
   gap: 2rem;
   margin-bottom: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contact-card {
@@ -201,8 +198,8 @@ import BaseCard from '@/components/BaseCard.vue'
 }
 
 .green-circle {
-  width: 12px;
   height: 12px;
+  aspect-ratio: 1 / 1;
   background-color: #1eaf53;
   border-radius: 50%;
   display: inline-block;
@@ -215,6 +212,12 @@ import BaseCard from '@/components/BaseCard.vue'
   }
   100% {
     transform: translateX(-50%) scaleX(1);
+  }
+}
+
+@media (max-width: 900px) {
+  .title {
+    margin-top: 100px;
   }
 }
 </style>
