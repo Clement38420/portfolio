@@ -6,7 +6,7 @@ import { drawBubble, getCanvasMousePosition, getRandomCoordinatesInCanvas } from
 
 const bubblesCanvas = useTemplateRef('bubbles-canvas')
 
-const NUMBER_OF_BUBBLES = 300
+const NUMBER_OF_BUBBLES = Math.floor((window.innerWidth * window.innerHeight) / 5000)
 let bubbles = Array<Bubble>(NUMBER_OF_BUBBLES)
 
 let time = 0
