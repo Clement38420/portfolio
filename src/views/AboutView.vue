@@ -515,12 +515,8 @@ onMounted(() => {
 }
 
 @media (max-width: 1200px) {
-  .hero {
-    padding-bottom: 0;
-  }
-
   .section2 {
-    margin-top: 64px;
+    margin-top: 200px;
   }
 
   .hero-card {
@@ -542,6 +538,16 @@ onMounted(() => {
   .hero {
     margin-top: min(60vw, var(--portrait-width));
     top: calc(50vh - 70px);
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding-bottom: 0;
+  }
+
+  .section2 {
+    margin-top: 64px;
   }
 }
 </style>
