@@ -62,7 +62,7 @@ h3 {
 }
 
 .animated-background {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: -1;
   background: linear-gradient(
