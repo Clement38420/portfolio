@@ -90,6 +90,7 @@ nav {
   inset: 0 0 auto 0;
   z-index: 1000;
   padding: 0 16px;
+  font-size: 1.3em;
 }
 
 nav * {
@@ -159,8 +160,8 @@ h1 {
   left: 50%;
   transform: translateX(-50%) scaleX(0);
   width: 60%;
-  height: 2px;
-  border-radius: 1px;
+  height: 0.15em;
+  border-radius: 100000px;
   transform-origin: center;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 1px 2px rgba(59, 130, 246, 0.15);
@@ -210,9 +211,23 @@ h1 {
   border-radius: 2px;
 }
 
+@media (min-width: 1000px) {
+  .navbar-items {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+}
+
 @media (max-width: 768px) {
   nav {
     justify-content: space-between;
+    font-size: 1em;
   }
 
   .nav-menu {
