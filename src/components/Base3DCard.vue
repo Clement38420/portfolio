@@ -47,12 +47,16 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.card {
+  box-shadow: var(--card-shadow);
+}
+
 .content {
   width: 100%;
   height: 100%;
   border-radius: inherit;
   border: inherit;
-  box-shadow: var(--card-shadow);
+  background-color: inherit;
   transition:
     transform 0.3s,
     box-shadow 0.3s;
