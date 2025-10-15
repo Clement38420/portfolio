@@ -502,13 +502,12 @@ onMounted(() => {
   }
 
   .portrait-card {
-    top: -270px;
+    top: -340px;
     right: -24px;
   }
 
   .hero {
-    margin-top: 350px;
-    top: calc(50vh - 70px);
+    margin-top: 200px;
   }
 }
 
