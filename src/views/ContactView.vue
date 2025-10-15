@@ -97,7 +97,7 @@ import BaseCard from '@/components/BaseCard.vue'
 
 .contact-card {
   position: relative;
-  width: 300px;
+  width: 350px;
   backdrop-filter: blur(10px);
   animation: fadeInUp 0.8s ease-out 0.6s backwards;
 }
@@ -125,8 +125,8 @@ import BaseCard from '@/components/BaseCard.vue'
 }
 
 .icon {
-  width: 32px;
-  height: 32px;
+  width: 1.8em;
+  height: 1.8em;
   transform-origin: center;
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 3);
   position: relative;
@@ -159,19 +159,19 @@ import BaseCard from '@/components/BaseCard.vue'
 }
 
 .text {
-  font-size: 1.375rem;
+  font-size: 1.1em;
   font-weight: bold;
   line-height: 1.2;
 }
 
 .subtitle {
-  font-size: 0.875rem;
+  font-size: 0.8em;
   color: var(--text-muted);
 }
 
 .arrow {
-  width: 24px;
-  height: 24px;
+  width: 1.2em;
+  height: 1.2em;
   transition:
     transform 0.3s ease,
     opacity 0.3s ease;
@@ -188,7 +188,7 @@ import BaseCard from '@/components/BaseCard.vue'
   align-items: center;
   gap: 8px;
   color: #138f41;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   text-align: center;
   border: 1px solid #22c55e;
   padding: 0.5rem 1rem;

@@ -38,6 +38,7 @@ body {
   background-color: var(--bg-dark-color);
   font-family: Calibri, sans-serif;
   color: var(--text-color);
+  font-size: clamp(1rem, 3vw, 1.4rem);
 }
 
 .view-background {

@@ -230,7 +230,6 @@ onMounted(() => {
   translate: 0 -50%;
   animation: fadeInUp 0.8s ease-out;
   display: flex;
-  padding: 64px 0;
 }
 
 .hero-card {
@@ -263,7 +262,6 @@ onMounted(() => {
 }
 
 .description {
-  font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.5;
   margin-right: 64px;
   animation: fadeInUp 0.6s ease-out 0.3s both;
@@ -303,9 +301,9 @@ onMounted(() => {
 }
 
 .section2 {
+  margin-top: min(40vh, 30vw);
   display: flex;
   gap: 64px;
-  margin-top: 350px;
   flex-wrap: wrap;
 }
 
@@ -342,7 +340,7 @@ onMounted(() => {
   border: 1px solid;
   padding: 0.7em 1em;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.8em;
   text-align: center;
   background-color: var(--bg-color);
   transition:
@@ -515,10 +513,6 @@ onMounted(() => {
 }
 
 @media (max-width: 1200px) {
-  .section2 {
-    margin-top: 200px;
-  }
-
   .hero-card {
     padding-top: 64px;
     padding-right: clamp(12px, 10%, 64px);
@@ -529,7 +523,7 @@ onMounted(() => {
   }
 
   .portrait-card {
-    bottom: 85%;
+    bottom: 92%;
     right: 50%;
     translate: 50% 0;
     width: min(60vw, var(--portrait-width));
@@ -544,10 +538,6 @@ onMounted(() => {
 @media (max-width: 700px) {
   .hero {
     padding-bottom: 0;
-  }
-
-  .section2 {
-    margin-top: 64px;
   }
 }
 </style>

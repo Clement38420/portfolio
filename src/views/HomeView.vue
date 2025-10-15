@@ -51,11 +51,11 @@ h2 {
 
 h3 {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  font-size: clamp(1em, 2vw, 1.4rem);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  max-width: 700px;
+  max-width: 900px;
   color: rgba(55, 65, 81, 0.83);
   animation: 0.7s ease-out 0.3s fadeInUp;
   animation-fill-mode: both;

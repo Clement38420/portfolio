@@ -90,7 +90,6 @@ nav {
   inset: 0 0 auto 0;
   z-index: 1000;
   padding: 0 16px;
-  font-size: 1.3em;
 }
 
 nav * {
@@ -182,7 +181,7 @@ h1 {
   background: #3b82f6;
 }
 .language-switch {
-  width: 2em;
+  width: 1.7em;
   background: none;
   border: none;
   padding: 0;
@@ -237,7 +236,7 @@ h1 {
 @media (max-width: 768px) {
   nav {
     justify-content: space-between;
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   .nav-menu {
