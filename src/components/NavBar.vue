@@ -190,6 +190,16 @@ h1 {
   transition:
     0.1s box-shadow,
     0.1s transform;
+  position: relative;
+}
+
+.language-switch:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 8px;
 }
 
 @media (hover: hover) {
@@ -201,7 +211,7 @@ h1 {
 
 .language-switch:active {
   box-shadow: var(--card-shadow-close);
-  transform: translateY(-50%) scale(1);
+  transform: translateY(5%) scale(1);
 }
 
 .language-switch img {
