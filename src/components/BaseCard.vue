@@ -55,6 +55,11 @@ defineProps<{
   height: 70%;
 }
 
+.card.no-hover .highlight {
+  height: 24px !important;
+  transition: none !important;
+}
+
 .content {
   position: relative;
   z-index: 1;
