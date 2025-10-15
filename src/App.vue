@@ -47,6 +47,7 @@ body {
   background:
     radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%);
+  z-index: -1;
 }
 
 .title {
