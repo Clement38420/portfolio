@@ -8,7 +8,7 @@ import HomeBubbles from '@/components/HomeBubbles.vue'
     <h3>
       {{ $t('home.subtitle') }}
       <a class="ense3-link" href="https://ense3.grenoble-inp.fr/" target="_blank" rel="noopener">
-        Grenoble INP - Ense3 <img src="@/assets/images/corner-arrow.svg" alt="" />
+        Grenoble INP - Ense3 <img src="../assets/images/icons/corner-arrow.svg" alt="" />
       </a>
     </h3>
   </div>

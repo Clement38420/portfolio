@@ -13,7 +13,7 @@ function toggleLanguage() {
 const toLanguage = computed(() => (locale.value === 'en' ? 'fr' : 'en'))
 
 const languageImage = computed(() => {
-  return new URL(`../assets/images/${toLanguage.value}.svg`, import.meta.url).href
+  return new URL(`../assets/images/icons/${toLanguage.value}.svg`, import.meta.url).href
 })
 
 const navLinks = [
@@ -58,7 +58,7 @@ function hideNavBarItems() {
 <template>
   <nav>
     <button class="nav-menu" @click="toggleNavBarItems">
-      <img src="@/assets/images/menu.svg" alt="menu" />
+      <img src="@/assets/images/icons/menu.svg" alt="menu" />
     </button>
     <h1>Clément Charbonnel</h1>
     <ul class="navbar-items">

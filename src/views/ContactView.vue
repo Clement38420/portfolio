@@ -15,34 +15,34 @@ import BaseCard from '@/components/BaseCard.vue'
           target="_blank"
           rel="noopener"
         >
-          <img src="@/assets/images/linkedin.svg" class="icon" alt="" />
+          <img src="../assets/images/icons/linkedin.svg" class="icon" alt="" />
           <div class="text-content">
             <span class="text linkedin">LinkedIn</span>
             <span class="subtitle">{{ $t('contact.linkedin.subtitle') }}</span>
           </div>
-          <img class="arrow" src="@/assets/images/corner-arrow.svg" alt="" />
+          <img class="arrow" src="../assets/images/icons/corner-arrow.svg" alt="" />
         </a>
       </BaseCard>
 
       <BaseCard class="contact-card email-card">
         <a href="mailto:c.charbo38@gmail.com" class="card-content">
-          <img src="@/assets/images/mail.svg" class="icon" alt="" />
+          <img src="../assets/images/icons/mail.svg" class="icon" alt="" />
           <div class="text-content">
             <span class="text mail">Mail</span>
             <span class="subtitle">{{ $t('contact.email.subtitle') }}</span>
           </div>
-          <img class="arrow" src="@/assets/images/corner-arrow.svg" alt="" />
+          <img class="arrow" src="../assets/images/icons/corner-arrow.svg" alt="" />
         </a>
       </BaseCard>
 
       <BaseCard class="contact-card github-card">
         <a href="https://github.com/Clement38420" class="card-content">
-          <img src="@/assets/images/github.svg" class="icon" alt="" />
+          <img src="../assets/images/icons/github.svg" class="icon" alt="" />
           <div class="text-content">
             <span class="text mail">GitHub</span>
             <span class="subtitle">{{ $t('contact.github.subtitle') }}</span>
           </div>
-          <img class="arrow" src="@/assets/images/corner-arrow.svg" alt="" />
+          <img class="arrow" src="../assets/images/icons/corner-arrow.svg" alt="" />
         </a>
       </BaseCard>
     </div>

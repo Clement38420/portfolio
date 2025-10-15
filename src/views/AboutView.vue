@@ -173,7 +173,12 @@ onMounted(() => {
 
     <Transition name="down-arrow">
       <div class="downArrow" v-if="scrollArrowShowed">
-        <img src="@/assets/images/down-arrow.svg" alt="Scroll down arrow" width="40" height="40" />
+        <img
+          src="../assets/images/icons/down-arrow.svg"
+          alt="Scroll down arrow"
+          width="40"
+          height="40"
+        />
       </div>
     </Transition>
 
@@ -283,7 +288,7 @@ onMounted(() => {
 
 .link::after {
   content: '';
-  background: url('@/assets/images/corner-arrow.svg') no-repeat center;
+  background: url('@/assets/images/icons/corner-arrow.svg') no-repeat center;
   display: inline-block;
   width: 16px;
   height: 16px;
