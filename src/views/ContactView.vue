@@ -100,6 +100,7 @@ import BaseCard from '@/components/BaseCard.vue'
   width: 350px;
   backdrop-filter: blur(10px);
   animation: fadeInUp 0.8s ease-out 0.6s backwards;
+  padding: 0;
 }
 
 .linkedin-card:hover {
@@ -122,6 +123,7 @@ import BaseCard from '@/components/BaseCard.vue'
   gap: 1rem;
   position: relative;
   height: 100%;
+  padding: 1.5em;
 }
 
 .icon {
