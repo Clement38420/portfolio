@@ -17,7 +17,7 @@ defineProps<{
   background-color: var(--bg-color);
   border-radius: 24px;
   box-shadow: var(--card-shadow);
-  padding: 2rem;
+  padding: 1.5em;
   transition:
     box-shadow 0.2s ease,
     transform 0.2s ease;
