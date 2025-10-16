@@ -3,8 +3,9 @@ import BaseCard from '@/components/BaseCard.vue'
 </script>
 
 <template>
-  <div class="view-background"></div>
   <div class="contact-view">
+    <div class="view-background"></div>
+
     <h2 class="title contact-title">{{ $t('contact.title') }}</h2>
 
     <div class="links">
