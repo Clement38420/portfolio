@@ -58,5 +58,40 @@
       "ense3": "Diplôme d'ingénieur dans la filière Automatique et Systèmes Intelligents (ASI). Spécialisé en mécatronique, automatique, électronique, traitement du signal.",
       "cpge": "Classe préparatoire aux grandes écoles (CPGE) spécialisée en Maths, Physique et Sciences de l'ingénieur (PCSI/PSI). "
     }
+  },
+  "projects": {
+    "title": "Mes projets",
+    "projects": {
+      "1": {
+        "name": "Mon portfolio",
+        "description": "Le site web que vous consultez actuellement ! Réalisé avec Vuejs, son code est disponible sur mon GitHub.",
+        "category": "Développement web"
+      },
+      "2": {
+        "name": "Mini-moto",
+        "description": "Un projet de mini-moto que j'ai conçue et réalisée entièrement.",
+        "category": "Bricolage / Mécanique"
+      },
+      "3": {
+        "name": "Banc d'essai de pneumatiques",
+        "description": "Ce projet a été réalisé dans le cadre de ma CPGE au Lycée Berthollet. Il permet de tester des pneus de voiture miniatures.",
+        "category": "Mécatronique / Robotique"
+      },
+      "4": {
+        "name": "The Odin Project",
+        "description": "C'est un projet open-source qui propose un cours ultra complet pour apprendre le développement web full-stack.",
+        "category": "Développement web"
+      },
+      "5": {
+        "name": "Application de gestion de stocks",
+        "description": "Application que j'ai développée pour mon père afin de l'aider à gérer les stocks de son entreprise.",
+        "category": "Développement web / Desktop"
+      },
+      "6": {
+        "name": "Mini-voiture",
+        "description": "Voiture deux places en acier que j'ai conçue sur SolidWorks et fabriquée dans mon atelier.",
+        "category": "Bricolage / Mécanique"
+      }
+    }
   }
 }

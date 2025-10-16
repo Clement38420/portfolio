@@ -58,5 +58,40 @@
       "subtitle": "See my projects"
     },
     "footerNote": "I'm currently looking for a robotics internship for summer 2025!"
+  },
+  "projects": {
+    "title": "My projects",
+    "projects": {
+      "1": {
+        "name": "My portfolio",
+        "description": "The website you're currently browsing! Built with Vue.js, its code is available on my GitHub.",
+        "category": "Web development"
+      },
+      "2": {
+        "name": "Mini motorbike",
+        "description": "A mini-motorbike project that I designed and built entirely.",
+        "category": "DIY / Mechanics"
+      },
+      "3": {
+        "name": "Tire test bench",
+        "description": "This project was carried out during my preparatory classes at Lycée Berthollet. It allows testing miniature car tires.",
+        "category": "Mechatronics / Robotics"
+      },
+      "4": {
+        "name": "The Odin Project",
+        "description": "An open-source project offering a very comprehensive course to learn full‑stack web development.",
+        "category": "Web development"
+      },
+      "5": {
+        "name": "Inventory management application",
+        "description": "An app I developed for my father to help him manage his company's inventory.",
+        "category": "Web / Desktop development"
+      },
+      "6": {
+        "name": "Mini car",
+        "description": "A two‑seater steel car designed in SolidWorks and built in my workshop.",
+        "category": "DIY / Mechanics"
+      }
+    }
   }
 }
