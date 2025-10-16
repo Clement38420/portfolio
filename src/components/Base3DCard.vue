@@ -12,7 +12,7 @@ const shine = useTemplateRef('shine')
 onMounted(() => {
   if (card.value) {
     card.value.addEventListener('mousemove', (e) => {
-      if (!props.noHover && !matchMedia('(hover: none)').matches) {
+      if (card.value && !props.noHover && !matchMedia('(hover: none)').matches) {
         const rect = card.value.getBoundingClientRect()
 
         const x = e.clientX - rect.left
