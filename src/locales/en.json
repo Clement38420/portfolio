@@ -65,32 +65,72 @@
       "1": {
         "name": "My portfolio",
         "description": "The website you're currently browsing! Built with Vue.js, its code is available on my GitHub.",
-        "category": "Web development"
+        "category": "Web development",
+        "article": [
+          "I first created this portfolio to showcase my projects in more detail than on my résumé. My initial idea was a simple site that quickly led to my projects, but after looking at developers’ and designers’ portfolios, I opted for a more sophisticated site.",
+          "Since I learned Vue.js while following The Odin Project (the course teaches React by default, but I felt more comfortable with Vue), it was the perfect opportunity to put what I picked up from the documentation into practice. I built the project with Vue, use i18n to provide French and English versions, and otherwise rely on plain CSS and TypeScript.",
+          "It starts with the home page. I wanted something interactive or at least dynamic. I began with subtle orbs moving in the background, then made them react to the cursor. That’s when the idea of many small bubbles came—more of them makes it more fun to move. The cursor attracts bubbles within a defined radius; inside it, their speed increases with distance to the cursor. A long press reverses their velocity; a short click pushes them away.",
+          "The About page is technical for two reasons. First, the 3D profile card: its orientation is computed from the cursor’s position relative to the card, and a highlight sweeps across the card based on the cursor to enhance the 3D effect. Second, the animated study timeline: it’s a single SVG path designed to be animated—offset to hide it, then revealed on section entry to give a sense of progress.",
+          "The Projects page is also technical. The trickiest part was animating the cards when one expands. I used a FLIP animation (First, Last, Invert, Play): measure positions before (First), apply the new layout and measure after (Last), instantly invert to the old position (Invert), then animate to the new one (Play)."
+        ]
       },
       "2": {
         "name": "Mini motorbike",
         "description": "A mini-motorbike project that I designed and built entirely.",
-        "category": "DIY / Mechanics"
+        "category": "DIY / Mechanics",
+        "article": [
+          "This mini motorbike project is my second real DIY/mechanics build. As a teenager I always dreamed of owning a motorbike or any motorized vehicle—hence my first engine-powered drift trike (not shown here). Since I also love tinkering, building the bike myself made it even more appealing.",
+          "I designed the plans in Fusion 360 before heading to the workshop to build the frame. Of course, I first had to source all the parts and size the frame accordingly. Starting from the engine and adding steel tubes around it, after several iterations I arrived at the final chassis.",
+          "In the workshop, I cut the steel tubes and mounting plates, then started welding with a stick/arc welder—affordable and accessible. The hardest part at first is not blowing holes through the relatively thin steel: the intense heat from the current can quickly melt it. That’s what I worked on improving during the build.",
+          "Once the frame was finished, I installed all the components—only to discover the main design issue: chain tension. It was too slack, so I tried multiple makeshift tensioners with poor results. The best so far is a steel guide; a simple roller would wear out in under an hour, so it wasn’t viable.",
+          "Today the bike runs, but the chain is still troublesome; even with the guide it can derail. To truly fix it, I’d likely need to redesign the rear of the frame (where the rear wheel is mounted to the suspension)."
+        ]
       },
       "3": {
         "name": "Tire test bench",
         "description": "This project was carried out during my preparatory classes at Lycée Berthollet. It allows testing miniature car tires.",
-        "category": "Mechatronics / Robotics"
+        "category": "Mechatronics / Robotics",
+        "article": [
+          "This is my most complete mechatronics project. It combines mechanics—both theoretical and practical—electronics, and computer science. I carried it out as part of the supervised personal initiative work (TIPE) during my preparatory classes at Lycée Claude‑Louis Berthollet in Annecy. These projects give students the opportunity to apply theory to a concrete application. Each year a theme is imposed; ours was ‘Games and Sports’. My teammate and I chose tires and Formula 1 to study how temperature and wear affect tire performance.",
+          "We started with the simplest possible friction model: static friction using Coulomb’s law. We quickly realized it was too simplistic for such a complex study, so we looked into a more accurate tire–road friction model.",
+          "We then moved on to dynamic friction. At our scale, we made assumptions to run calculations using data from our first prototype—particularly the forces acting on the tires, which we reduced to the road’s tangential effect on the tire and the car’s weight distributed over the four tires. We therefore needed a way to measure these forces and the resulting slip.",
+          "After many different prototypes, we built a machine that lets us adjust the force applied to the tire, control tire speed on the roller, measure the rotational speeds of the tire and the roller, and simulate circuit laps. The force on the tire is provided by preloaded springs to set the effort on the wheel; we measure it with strain gauges placed under the roller that receives the wheel’s load. The wheel is driven by a brushless motor powered by an ESC and controlled by an Arduino, which also collects measurements. Everything is managed by a Windows UI I developed that communicates with the Arduino. In this interface, we can view live readings, create speed programs to repeat tests on different tire types, and save our formatted data via a Python script.",
+          "This project now serves as a lab bench for future students in our class."
+        ]
       },
       "4": {
         "name": "The Odin Project",
         "description": "An open-source project offering a very comprehensive course to learn full‑stack web development.",
-        "category": "Web development"
+        "category": "Web development",
+        "article": [
+          "The Odin Project is an open‑source course maintained by developers with the goal of giving anyone the knowledge needed to become a full‑stack developer. The content is partly written by the maintainers, and also links to many external resources to complement the website. I added this course to my projects because I’ve been following it alongside school for over a year. I manage to stick with it thanks to its format, punctuated by many projects that validate skills and let you practice new concepts. You can find all my projects from the course on my GitHub; they are prefixed with the ‘odin‑’ keyword.",
+          "The course starts with the fundamentals of HTML, CSS, and JavaScript and, beyond code, an introduction to Git and computer science as applied to the Web. This part went fairly quickly because I already had the basics, but it was still complete enough for me to learn new things.",
+          "Next you choose between two paths: full‑stack JavaScript with Node.js, or Ruby and Ruby on Rails. Since I was more comfortable with JavaScript, I picked the Node.js track. This chapter contains seven major sections—on JavaScript, HTML & CSS, React, Node.js, and even how to find a job after the course.",
+          "My favorite parts are on the front end because the new knowledge is very visual and it’s easy to see your progress. I’m also drawn to the back end, where structure, data handling, and rigor are essential. That’s why I’m following this course: it teaches me to do it all and become a full‑stack developer. And with frameworks like Tauri or Electron, being a web developer can also mean building desktop apps, which further increases the course’s versatility.",
+          "I’m currently in the last technical chapter of the course, dedicated to Node.js. After that, I’ll be able to build a web application from A to Z."
+        ]
       },
       "5": {
         "name": "Inventory management application",
         "description": "An app I developed for my father to help him manage his company's inventory.",
-        "category": "Web / Desktop development"
+        "category": "Web / Desktop development",
+        "article": [
+          "This app is, I think, the first I developed of such scope. Its final version could manage stock in/out, handle invoices per business case, and track equipment available for each work site. The first version used WinForms with C#. It’s a fairly quick way to build a Windows app, but it’s not very customizable, well‑structured, or scalable. I then moved to WPF, which allowed for better UI management while improving the project’s structure. Later, when I discovered web development, I wanted to migrate everything to Vue.js.",
+          "That’s when I discovered this framework—approachable, fast, and efficient. With frameworks like Vuetify, it was easy and quick to build attractive interfaces. Still, a mistake I made was starting this web project with little knowledge. Understanding how frameworks work, debugging errors, and truly mastering the code you write is hard when you have so little experience.",
+          "That’s why, a few years later, I took The Odin Project, which helped me learn the fundamentals and go deeper. If I had to pick up this project again today, I wouldn’t use UI frameworks like Vuetify anymore, because I now enjoy building my own components—something that wasn’t true back then."
+        ]
       },
       "6": {
         "name": "Mini car",
         "description": "A two‑seater steel car designed in SolidWorks and built in my workshop.",
-        "category": "DIY / Mechanics"
+        "category": "DIY / Mechanics",
+        "article": [
+          "Here’s my latest big DIY project: a little two‑seater car. The initial idea was to build a vehicle that looks like a Jeep, like in the movies—I found the style and bodywork approachable to make. The first constraint was budget, which forced technical choices. For example, the vehicle has no suspension; adding them would have blown the budget. Some parts were undersized too—like the rear axle shaft, which eventually snapped. Despite all that, it was an extremely formative project.",
+          "First came the design in SolidWorks. It’s a reference CAD tool, and learning more pays off. I learned to use more advanced features like weldments directly in the software, and 2D drawings, which were critical when manufacturing the parts.",
+          "On the manufacturing side, it wasn’t easy—from the precision required for the parts to squaring the chassis. Welding tends to warp steel, which cost me many reworks before I got a perfectly rectangular frame.",
+          "Finally, I discovered some mechanical issues only after assembly—never pleasant: a steering ratio much too short due to a design miscalculation, and a center of mass too far back, which made the car pop a wheelie under acceleration.",
+          "This project is far from finished and deserves many improvements. I can’t wait to get back to it and keep tinkering with this little vehicle full of potential."
+        ]
       }
     }
   }

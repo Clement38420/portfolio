@@ -65,32 +65,73 @@
       "1": {
         "name": "Mon portfolio",
         "description": "Le site web que vous consultez actuellement ! Réalisé avec Vuejs, son code est disponible sur mon GitHub.",
-        "category": "Développement web"
+        "category": "Développement web",
+        "article": [
+          "J'ai tout d'abord créé ce portfolio pour pouvoir exposer plus précisément mes projets ailleurs que sur mon CV. Mon idée fut donc d’abord un site assez simple où l’on tombait sur mes projets assez rapidement. Puis, en regardant ce que les développeurs et designers concevaient comme portfolio, j’ai changé d’avis pour un site plus sophistiqué.",
+          "Comme j’ai appris Vue.js en suivant le cours de The Odin Project (le cours apprend normalement React, mais je me sentais plus à l’aise avec Vue), je me suis dit que cela serait l’occasion de mettre en pratique ce que j’ai retenu de la documentation de ce framework. Je me suis donc lancé dans le projet avec cette techno. Pour les traductions, j’utilise i18n, qui me permet de fournir à mon site sa version française et sa version anglaise. À part cela, j’utilise du CSS classique et TypeScript.",
+          "Tout commence avec la page d’accueil. Je voulais quelque chose d’interactif, ou au moins dynamique. En commençant par des orbes subtiles qui bougent en arrière-plan, j’ai pensé à les faire interagir avec la souris de l’utilisateur. C’est à ce moment que les petites bulles me sont venues à l’idée ; plus nombreuses, elles seraient plus amusantes à déplacer. Le curseur les attire donc vers lui dans un rayon prédéfini. Dans ce rayon, les bulles voient leur vitesse augmenter en fonction de leur distance avec la souris. Lors d’un clic prolongé, cette vitesse est inversée, et lors d’un clic plus court, les bulles subissent une force qui les expulse du curseur.",
+          "Ensuite, la page « À propos » est technique pour deux raisons. Premièrement, la carte 3D de la photo de profil : l’orientation de cette dernière est calculée en fonction de la position du curseur par rapport à la carte. Ensuite, un effet de brillance tourne sur la carte, de nouveau en fonction du curseur, pour accentuer l’effet 3D. Le deuxième aspect technique est le parcours animé à gauche de la description de mes études. C’est en fait une image SVG que j’ai créée dans le but de pouvoir être animée. C’est donc une balise « path » unique qui crée le tracé bleu. Ensuite, on décale le tracé pour le faire disparaître, et une fois la rubrique affichée, le tracé remonte pour donner cette illusion de progression.",
+          "La dernière page technique est celle des projets. Le plus challengeant fut l’animation des cartes lorsqu’une d’entre elles s’agrandit. Pour cela, la solution que j’ai trouvée sur Internet est celle d’une animation FLIP (First Last Invert Play). Le principe est le suivant : on calcule la position des éléments avant de les déplacer (First), puis on les déplace et on regarde leur position finale (Last). Ensuite, on les remet instantanément à leur place initiale (Invert), puis, grâce au fait que l’on connaît leur position finale, on peut créer une animation qui les emmènera là où ils sont censés être (Play)."
+        ]
+
       },
       "2": {
         "name": "Mini-moto",
         "description": "Un projet de mini-moto que j'ai conçue et réalisée entièrement.",
-        "category": "Bricolage / Mécanique"
+        "category": "Bricolage / Mécanique",
+        "article": [
+          "Ce projet de mini-moto est mon deuxième vrai projet de bricolage et de mécanique. En étant ado, j’ai toujours rêvé d’avoir une moto, ou du moins un véhicule motorisé, d’où mon premier projet de drift-trike à moteur (non présenté dans ce portfolio). De plus, comme je suis aussi passionné par le bricolage, l’idée d’avoir une moto serait encore plus intéressante si c’était moi qui la construisais.",
+          "Ainsi, j’ai conçu les plans de cette moto sur Fusion 360 avant de passer à l’atelier pour fabriquer le châssis. Bien sûr, avant de démarrer les plans, il a fallu rechercher toutes les pièces dont j’avais besoin pour concevoir le cadre en fonction. En partant donc du moteur et en ajoutant les tubes d’acier autour de lui, j’ai abouti, après plusieurs modifications, au châssis final de mon véhicule.",
+          "À l’atelier, la première étape est de couper les tubes d’acier et les plaques de fixation. Une fois cela fait, la soudure peut commencer. J’utilise un poste de soudure à l’arc, car c’est le moins onéreux et le plus accessible. Le plus dur, lorsqu’on commence, c’est de ne pas faire de trou dans les pièces en acier, car du fait de leur épaisseur assez fine, la chaleur extrême produite par le courant électrique peut vite faire fondre le matériau. C’est ce sur quoi j’ai essayé de m’améliorer durant la fabrication de ce projet.",
+          "Enfin, une fois le cadre terminé, il faut ajouter toutes les pièces sur ce dernier pour enfin voir apparaître le véhicule final… enfin, c’est ce que je pensais. Le problème majeur de ma conception est la gestion de la tension de la chaîne. Celle-ci était trop lâche, alors j’ai improvisé de nombreux systèmes peu concluants afin de la retendre. Le dernier système à ce jour, celui qui fonctionne le mieux, est un guide en acier. En acier, car une simple roulette était consommée en moins d’une heure de roulage — une solution donc peu viable.",
+          "Aujourd’hui, cette moto roule, mais toujours avec ses problèmes de chaîne incorrigible, car même avec le guide, elle peut dérailler. Si je voulais résoudre ce problème, je pense qu’il faudrait complètement repenser la partie arrière du châssis (partie où la roue arrière est maintenue par les suspensions)."
+        ]
       },
       "3": {
         "name": "Banc d'essai de pneumatiques",
         "description": "Ce projet a été réalisé dans le cadre de ma CPGE au Lycée Berthollet. Il permet de tester des pneus de voiture miniatures.",
-        "category": "Mécatronique / Robotique"
+        "category": "Mécatronique / Robotique",
+        "article": [
+          "Voici mon projet de mécatronique le plus complet. On y retrouve de la mécanique, à la fois théorique et pratique, de l’électronique et de l’informatique. Ce projet a été réalisé dans le cadre des Travaux d’initiative personnelle encadrés (TIPE) durant ma classe préparatoire au Lycée Claude-Louis Berthollet à Annecy. Ces travaux donnent aux élèves de prépa l’occasion d’appliquer leur savoir théorique à une application concrète. Un thème est imposé chaque année et le nôtre était « Jeux et sports ». Mon camarade et moi avons donc choisi comme sujet les pneumatiques et la Formule 1, afin de comprendre l’influence de la température et de l’usure sur les performances d’un pneumatique.",
+          "Nous avons donc élaboré le modèle de frottement le plus simpliste qui soit, le frottement statique, grâce à la loi de Coulomb. Nous nous sommes vite rendu compte que ce modèle était trop simpliste pour une étude aussi complexe ; nous avons donc réfléchi à un modèle plus précis du frottement pneu-route.",
+          "Nous nous sommes ensuite orientés vers l’étude du frottement dynamique. À notre échelle, nous avons fait des hypothèses pour pouvoir effectuer des calculs avec les données obtenues sur notre première maquette, notamment sur les forces exercées sur les pneus, que nous ramenons à l’effet tangentiel de la route sur le pneu ainsi qu’au poids de la voiture, réparti sur les quatre pneus. Il nous fallait donc un moyen de mesurer ces forces et le glissement qui en résultait.",
+          "Ainsi, après de nombreux prototypes, nous sommes parvenus à une machine qui nous permet de: adapter la force appliquée sur le pneu, gérer la vitesse du pneu sur le rouleau, mesurer les vitesses de rotation du pneu et du rouleau, et simuler des tours de circuit. L’application de la force sur le pneu est assurée par des ressorts que l’on peut précontraindre afin de régler l’effort qu’ils exercent sur la roue. On peut mesurer cette force grâce à des jauges de déformation disposées sous le rouleau, qui reçoit l’effort de la roue. La roue est entraînée par un moteur sans balais, alimenté par un ESC et contrôlé par une carte Arduino qui récupère aussi les mesures. Le tout est régi par une interface utilisateur que j’ai développée pour Windows et qui communique avec la carte Arduino. Dans cette interface, on peut relever les mesures en direct, créer des profils de vitesse afin de répéter des essais sur différents types de pneumatiques, et sauvegarder nos données mises en forme grâce à un script Python.",
+          "Ce projet sert maintenant de banc de TP pour les futurs élèves de notre classe."
+        ]
       },
       "4": {
         "name": "The Odin Project",
         "description": "C'est un projet open-source qui propose un cours ultra complet pour apprendre le développement web full-stack.",
-        "category": "Développement web"
+        "category": "Développement web",
+        "article": [
+          "The Odin Project est un cours open source maintenu par des développeurs, dont l’objectif est de donner à chacun les connaissances nécessaires pour devenir développeur full‑stack. Le contenu est en partie rédigé par les mainteneurs du projet, mais il renvoie aussi à de nombreuses ressources externes pour compléter les informations du site web. J’ai ajouté ce cours à mes projets car je le suis en parallèle de l’école depuis plus d’un an. J’arrive à m’y tenir grâce à son format, ponctué d’une multitude de projets servant à valider les compétences et à pratiquer les nouveaux acquis. Vous pouvez retrouver tous mes projets issus de ce cours sur ma page GitHub ; ils sont préfixés par le mot‑clé « odin‑ ».",
+          "Le cours commence par les fondamentaux de HTML, de CSS et de JavaScript, ainsi que, au‑delà du code, une première découverte de Git et de l’informatique appliquée au Web. Cette partie a été relativement rapide, car je possédais déjà ces bases, mais suffisamment complète pour m’apprendre de nouvelles choses.",
+          "Ensuite, il faut choisir entre deux parcours : d’un côté, développeur full‑stack JavaScript avec Node.js ; de l’autre, Ruby et Ruby on Rails. Comme j’étais plus à l’aise avec JavaScript, j’ai choisi le parcours basé sur Node.js. Ce chapitre comprend sept grandes sections dédiées, par exemple, à JavaScript, HTML et CSS, React, Node.js, ou même à la recherche d’un emploi à l’issue du cours.",
+          "Pour moi, les parties les plus plaisantes sont celles du front‑end, car les nouveaux apprentissages sont très visuels et il est facile de mesurer sa progression. Cependant, j’ai aussi une attirance pour le back‑end, où la structuration, la gestion des données et la rigueur sont essentielles. C’est pourquoi je suis ce cours, qui m’apprend à tout faire et à devenir développeur full‑stack. De plus, avec des frameworks comme Tauri ou Electron, être développeur web peut aussi signifier être développeur d’applications de bureau, ce qui accroît encore la polyvalence de ce cursus.",
+          "Actuellement, je suis dans le dernier chapitre technique du cours, dédié à Node.js. Après cela, je serai capable de créer une application web de A à Z."
+        ]
       },
       "5": {
         "name": "Application de gestion de stocks",
         "description": "Application que j'ai développée pour mon père afin de l'aider à gérer les stocks de son entreprise.",
-        "category": "Développement web / Desktop"
+        "category": "Développement web / Desktop",
+        "article": [
+          "Cette application est, je pense, la première que j’ai développée d’une telle envergure. Sa version finale permettait de gérer les entrées et sorties de stock, de gérer les factures des différentes affaires de l’entreprise, et de surveiller le matériel disponible pour chaque chantier. La première version utilisait WinForms avec C#. C’est un moyen assez rapide de créer une application Windows, mais peu personnalisable, peu structurée et peu évolutive. Je suis donc passé à WPF. Ce framework permettait une meilleure gestion des interfaces utilisateur tout en améliorant la structuration du projet. Plus tard, lorsque j’ai découvert le développement web, j’ai eu envie de tout basculer sur Vue.js.",
+          "C’est à ce moment que j’ai découvert ce framework, facile d’accès, rapide et efficace. De plus, avec des frameworks comme Vuetify, il était simple et rapide de créer des interfaces attrayantes. Néanmoins, une erreur que j’ai commise, je pense, a été de me lancer dans ce projet web avec peu de connaissances. En effet, comprendre comment les frameworks fonctionnent, déboguer les erreurs et maîtriser réellement le code que l’on produit sont des choses difficiles quand on a si peu de connaissances.",
+          "C’est pourquoi, quelques années plus tard, je me suis lancé dans le cours The Odin Project, qui m’a permis d’apprendre les bases et d’approfondir mes compétences. Si je devais reprendre ce projet aujourd’hui, je n’utiliserais plus de frameworks comme Vuetify, car je prends désormais plaisir à créer mes propres composants, ce qui n’était pas le cas auparavant."
+        ]
       },
       "6": {
         "name": "Mini-voiture",
         "description": "Voiture deux places en acier que j'ai conçue sur SolidWorks et fabriquée dans mon atelier.",
-        "category": "Bricolage / Mécanique"
+        "category": "Bricolage / Mécanique",
+        "article": [
+          "Voici mon dernier grand projet de bricolage : une voiturette à deux places. L’idée première était de fabriquer un véhicule ressemblant à une Jeep, comme on en voit dans les films. J’en trouvais le style et la carrosserie abordables à fabriquer. Le premier souci auquel j’ai été confronté a été le budget : il a fallu faire des choix techniques. Par exemple, mon véhicule ne comporte aucune suspension ; elles auraient ajouté des pièces qui auraient fait exploser mon budget. De plus, certaines pièces ont été sous‑dimensionnées, comme l’arbre d’entraînement des roues arrière, qui a fini par rompre. Malgré tout cela, ce fut un projet extrêmement formateur.",
+          "Premièrement, la conception sous SolidWorks. Ce logiciel est une référence de la CAO, et en apprendre davantage ne peut être que bénéfique. J’ai ainsi appris à utiliser des fonctions plus avancées, comme la mécano‑soudure, disponible directement dans le logiciel, ou la mise en plan, déterminante lors de la fabrication des pièces de la voiture.",
+          "Côté fabrication, ce ne fut pas de tout repos. À commencer par la précision nécessaire dans la fabrication des pièces et dans l’équerrage du châssis. En effet, sous l’effet de la soudure, l’acier a tendance à se déformer, ce qui m’a coûté de nombreuses reprises avant d’obtenir un cadre parfaitement rectangulaire.",
+          "Enfin, j’ai découvert quelques problèmes mécaniques seulement une fois la fabrication terminée, ce qui n’est pas toujours agréable : une direction beaucoup trop courte, due à un mauvais calcul lors de la conception, ou un centre de masse trop reculé, qui faisait cabrer la voiture lors des accélérations.",
+          "Finalement, ce projet est loin d’être terminé et mériterait encore de nombreuses améliorations. J’ai hâte de pouvoir m’y repencher pour continuer à bricoler ce véhicule plein de potentiel."
+        ]
       }
     }
   }

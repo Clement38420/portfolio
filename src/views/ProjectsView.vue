@@ -4,11 +4,15 @@ import BaseCard from '@/components/BaseCard.vue'
 import { SkillCategories } from '@/types'
 import { nextTick, ref } from 'vue'
 const { Programming, DIY, CAD, SoftSkills, Robotics } = SkillCategories
+import { useI18n } from 'vue-i18n'
+
+const i18n = useI18n()
 
 interface Project {
   name: string
   id: string
   category: SkillCategories
+  links?: { type: string; url: string }[]
 }
 
 const projects: Project[] = [
@@ -16,6 +20,7 @@ const projects: Project[] = [
     name: 'portfolio',
     id: '1',
     category: Programming,
+    links: [{ type: 'github', url: 'https://github.com/Clement38420/portfolio' }],
   },
   {
     name: 'moto',
@@ -31,6 +36,10 @@ const projects: Project[] = [
     name: 'top',
     id: '4',
     category: Programming,
+    links: [
+      { type: 'the-odin-project', url: 'https://www.theodinproject.com/' },
+      { type: 'github', url: 'https://github.com/Clement38420' },
+    ],
   },
   {
     name: 'stockapp',
@@ -116,8 +125,24 @@ async function extendProject(id: string) {
       }
     }
   })
+}
 
-  console.log(first, last)
+const projectImages500 = import.meta.glob(
+  '@/assets/images/projects/*-500.{png,jpg,jpeg,webp,svg}',
+  {
+    eager: true,
+    import: 'default',
+  },
+) as Record<string, string>
+
+function projectImage(id: string): string {
+  for (const [path, url] of Object.entries(projectImages500)) {
+    const m = path.match(/\/(\d+)-500\.png$/i)
+    if (m && m[1] === id) return url
+  }
+
+  // Fallback: laisse l'ancien chemin (n’inclura pas au build si inexistant)
+  return `/src/assets/images/projects/${id}-500.png`
 }
 </script>
 
@@ -135,16 +160,33 @@ async function extendProject(id: string) {
         :no-hover="extendedProject === project.id"
       >
         <BaseCard class="project-card" no-hover>
-          <img
-            class="project-image"
-            :src="`/src/assets/images/projects/${project.id}-500.png`"
-            alt="project image"
-          />
+          <img class="project-image" :src="projectImage(project.id)" alt="project image" />
           <h3 class="project-title">{{ $t(`projects.projects.${project.id}.name`) }}</h3>
+          <div class="project-links-container">
+            <a
+              v-for="(link, i) in project.links"
+              :key="i"
+              :href="link.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+              @click.stop=""
+            >
+              <img :src="`/src/assets/images/icons/${link.type}.svg`" :alt="link.type" />
+            </a>
+          </div>
           <p class="project-category" :style="{ color: skillCategoriesColors[project.category] }">
             {{ $t(`projects.projects.${project.id}.category`) }}
           </p>
           <p class="project-description">{{ $t(`projects.projects.${project.id}.description`) }}</p>
+          <div class="project-article">
+            <p
+              v-for="(paragraph, i) in i18n.tm(`projects.projects.${project.id}.article`)"
+              :key="i"
+            >
+              {{ paragraph }}
+            </p>
+          </div>
         </BaseCard>
       </Base3DCard>
     </div>
@@ -210,6 +252,7 @@ async function extendProject(id: string) {
   height: 100%;
   width: 100%;
   padding: 1.7em;
+  position: relative;
 }
 
 .project-image {
@@ -217,6 +260,19 @@ async function extendProject(id: string) {
   width: 100%;
   height: 185px;
   object-fit: cover;
+}
+
+.project-links-container {
+  position: absolute;
+  right: 0;
+  top: 205px;
+  display: flex;
+  gap: 10px;
+}
+
+.project-link img {
+  width: 1.4em;
+  height: 1.4em;
 }
 
 .project-title {
@@ -234,6 +290,24 @@ async function extendProject(id: string) {
   color: var(--text-muted);
 }
 
+.project-article {
+  display: none;
+  margin-top: 1em;
+}
+
+.project-article:first-letter {
+  font-size: 4em;
+  float: left;
+  line-height: 0.65;
+  margin: 0.2em 0.2em 0 0;
+  font-weight: bold;
+}
+
+.project-article p {
+  margin-bottom: 1em;
+  font-size: 0.9em;
+}
+
 .project-card-3d.stockapp .project-image {
   object-fit: contain;
 }
@@ -241,6 +315,34 @@ async function extendProject(id: string) {
 .extended {
   grid-column: span 2;
   grid-row: span 2;
+}
+
+.extended .project-image {
+  display: none;
+}
+
+.extended .project-links-container {
+  position: absolute;
+  right: 16px;
+  top: -15px;
+}
+
+.extended .project-link img {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.extended .project-title {
+  font-size: 1.6em;
+  color: var(--text-muted);
+}
+
+.extended .project-description {
+  display: none;
+}
+
+.extended .project-article {
+  display: block;
 }
 
 @container (max-width: calc(500px + 3em)) {
