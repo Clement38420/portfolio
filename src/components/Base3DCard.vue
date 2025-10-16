@@ -12,7 +12,7 @@ const shine = useTemplateRef('shine')
 onMounted(() => {
   if (card.value) {
     card.value.addEventListener('mousemove', (e) => {
-      if (!props.noHover) {
+      if (!props.noHover && !matchMedia('(hover: none)').matches) {
         const rect = card.value.getBoundingClientRect()
 
         const x = e.clientX - rect.left
@@ -32,6 +32,9 @@ onMounted(() => {
           shine.value.style.background = `linear-gradient(${angle}deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.08) 60%, transparent 100%)`
           shine.value.style.opacity = Math.min(intensity * 1.1, 0.45).toString()
         }
+      } else {
+        if (card.value) card.value.style.transform = 'unset'
+        if (shine.value) shine.value.style.opacity = '0'
       }
     })
 
