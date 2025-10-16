@@ -2,30 +2,36 @@
 import { onMounted, useTemplateRef } from 'vue'
 import { computeDistance } from '@/utils'
 
+const props = defineProps<{
+  noHover?: boolean
+}>()
+
 const card = useTemplateRef('card')
 const shine = useTemplateRef('shine')
 
 onMounted(() => {
   if (card.value) {
     card.value.addEventListener('mousemove', (e) => {
-      const rect = card.value.getBoundingClientRect()
+      if (!props.noHover) {
+        const rect = card.value.getBoundingClientRect()
 
-      const x = e.clientX - rect.left
-      const y = e.clientY - rect.top
-      const centerX = rect.width / 2
-      const centerY = rect.height / 2
+        const x = e.clientX - rect.left
+        const y = e.clientY - rect.top
+        const centerX = rect.width / 2
+        const centerY = rect.height / 2
 
-      const rotateY = -(x / centerX - 1)
-      const rotateX = y / centerY - 1
-      const intensity = computeDistance({ x: x, y: y }, { x: centerX, y: centerY }) / 200
+        const rotateY = -(x / centerX - 1)
+        const rotateX = y / centerY - 1
+        const intensity = computeDistance({ x: x, y: y }, { x: centerX, y: centerY }) / 200
 
-      if (card.value)
-        card.value.style.transform = `perspective(500px) rotate3d(${rotateX}, ${rotateY}, 0, ${intensity}deg)`
+        if (card.value)
+          card.value.style.transform = `perspective(500px) rotate3d(${rotateX}, ${rotateY}, 0, ${intensity}deg)`
 
-      if (shine.value) {
-        const angle = (Math.atan2(y - centerY, x - centerX) * 180) / Math.PI - 90
-        shine.value.style.background = `linear-gradient(${angle}deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.08) 60%, transparent 100%)`
-        shine.value.style.opacity = Math.min(intensity * 1.1, 0.45).toString()
+        if (shine.value) {
+          const angle = (Math.atan2(y - centerY, x - centerX) * 180) / Math.PI - 90
+          shine.value.style.background = `linear-gradient(${angle}deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.08) 60%, transparent 100%)`
+          shine.value.style.opacity = Math.min(intensity * 1.1, 0.45).toString()
+        }
       }
     })
 
@@ -49,6 +55,7 @@ onMounted(() => {
 <style scoped>
 .card {
   box-shadow: var(--card-shadow);
+  position: relative;
 }
 
 .content {
@@ -70,7 +77,6 @@ onMounted(() => {
 }
 
 .shine {
-  transform: scale(1.03);
   pointer-events: none;
   position: absolute;
   inset: 0;
