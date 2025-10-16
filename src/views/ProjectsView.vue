@@ -137,7 +137,7 @@ async function extendProject(id: string) {
         <BaseCard class="project-card" no-hover>
           <img
             class="project-image"
-            :src="`/src/assets/images/projects/${project.id}.png`"
+            :src="`/src/assets/images/projects/${project.id}-500.png`"
             alt="project image"
           />
           <h3 class="project-title">{{ $t(`projects.projects.${project.id}.name`) }}</h3>
