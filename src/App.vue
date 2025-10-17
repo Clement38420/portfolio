@@ -10,6 +10,20 @@ import NavBar from './components/NavBar.vue'
 </template>
 
 <style>
+@font-face {
+  font-family: Calibri;
+  src: url('./assets/fonts/Calibri/calibri.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Calibri;
+  src: url('./assets/fonts/Calibri/calibri_bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root {
   --bg-color: hsl(0, 0%, 95%);
   --bg-light-color: hsl(0, 0%, 100%);
@@ -25,20 +39,7 @@ import NavBar from './components/NavBar.vue'
 
 body {
   background-color: var(--bg-dark-color);
-  /* Utilise Inter si dispo (déjà packagé), puis fallback systèmes; Calibri local reste possible sans téléchargement TTF */
-  font-family:
-    Inter,
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    Roboto,
-    'Noto Sans',
-    'Helvetica Neue',
-    Arial,
-    'Liberation Sans',
-    'DejaVu Sans',
-    Calibri,
-    sans-serif;
+  font-family: Calibri, sans-serif;
   color: var(--text-color);
   font-size: clamp(1rem, 3vw, 1.2rem);
 }
