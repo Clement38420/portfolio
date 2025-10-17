@@ -146,10 +146,16 @@ const linkIcons = import.meta.glob('@/assets/images/icons/*.svg', {
   import: 'default',
 }) as Record<string, string>
 
+const linkIconsByName = Object.fromEntries(
+  Object.entries(linkIcons).map(([path, url]) => {
+    const filename = path.split('/').pop()?.replace('.svg', '') || ''
+    return [filename, url]
+  }),
+) as Record<string, string>
+
 function getLinkIcon(type: string): string {
-  for (const [path, url] of Object.entries(linkIcons)) {
-    const m = path.match(/\/(\d+)\.svg$/i)
-    if (m && m[1] === type) return url
+  if (linkIconsByName[type]) {
+    return linkIconsByName[type]
   }
 
   return `/src/assets/images/icons/${type}.svg`
