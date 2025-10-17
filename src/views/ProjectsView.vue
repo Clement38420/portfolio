@@ -342,7 +342,6 @@ function getLinkIcon(type: string): string {
 
 .extended .project-links-container {
   position: absolute;
-  right: 16px;
   top: 15px;
 }
 
