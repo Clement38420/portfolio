@@ -38,7 +38,10 @@ const projects: Project[] = [
     category: Programming,
     links: [
       { type: 'the-odin-project', url: 'https://www.theodinproject.com/' },
-      { type: 'github', url: 'https://github.com/Clement38420' },
+      {
+        type: 'github',
+        url: 'https://github.com/Clement38420?tab=repositories&q=odin-&type=&language=&sort=',
+      },
     ],
   },
   {
