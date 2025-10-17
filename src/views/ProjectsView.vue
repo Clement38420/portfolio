@@ -127,22 +127,32 @@ async function extendProject(id: string) {
   })
 }
 
-const projectImages500 = import.meta.glob(
-  '@/assets/images/projects/*-500.{png,jpg,jpeg,webp,svg}',
-  {
-    eager: true,
-    import: 'default',
-  },
-) as Record<string, string>
+const projectImages500 = import.meta.glob('@/assets/images/projects/*-500.png', {
+  eager: true,
+  import: 'default',
+}) as Record<string, string>
 
-function projectImage(id: string): string {
+function getProjectImage(id: string): string {
   for (const [path, url] of Object.entries(projectImages500)) {
     const m = path.match(/\/(\d+)-500\.png$/i)
     if (m && m[1] === id) return url
   }
 
-  // Fallback: laisse l'ancien chemin (n’inclura pas au build si inexistant)
   return `/src/assets/images/projects/${id}-500.png`
+}
+
+const linkIcons = import.meta.glob('@/assets/images/icons/*.svg', {
+  eager: true,
+  import: 'default',
+}) as Record<string, string>
+
+function getLinkIcon(type: string): string {
+  for (const [path, url] of Object.entries(linkIcons)) {
+    const m = path.match(/\/(\d+)\.svg$/i)
+    if (m && m[1] === type) return url
+  }
+
+  return `/src/assets/images/icons/${type}.svg`
 }
 </script>
 
@@ -160,7 +170,7 @@ function projectImage(id: string): string {
         :no-hover="extendedProject === project.id"
       >
         <BaseCard class="project-card" no-hover>
-          <img class="project-image" :src="projectImage(project.id)" alt="project image" />
+          <img class="project-image" :src="getProjectImage(project.id)" alt="project image" />
           <h3 class="project-title">{{ $t(`projects.projects.${project.id}.name`) }}</h3>
           <div class="project-links-container">
             <a
@@ -172,7 +182,7 @@ function projectImage(id: string): string {
               class="project-link"
               @click.stop=""
             >
-              <img :src="`/src/assets/images/icons/${link.type}.svg`" :alt="link.type" />
+              <img :src="getLinkIcon(link.type)" :alt="link.type" />
             </a>
           </div>
           <p class="project-category" :style="{ color: skillCategoriesColors[project.category] }">
