@@ -12,14 +12,14 @@ import NavBar from './components/NavBar.vue'
 <style>
 @font-face {
   font-family: Calibri;
-  src: url('./assets/fonts/Calibri/calibri.ttf');
+  src: url('./assets/fonts/Calibri/calibri.woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: Calibri;
-  src: url('./assets/fonts/Calibri/calibri_bold.ttf');
+  src: url('./assets/fonts/Calibri/calibri_bold.woff2');
   font-weight: bold;
   font-style: normal;
 }
