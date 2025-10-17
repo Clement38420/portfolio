@@ -48,10 +48,10 @@ onMounted(() => {
 
 <template>
   <div class="card" ref="card">
-    <div class="shine" ref="shine"></div>
     <div class="content">
       <slot></slot>
     </div>
+    <div class="shine" ref="shine"></div>
   </div>
 </template>
 
@@ -89,5 +89,9 @@ onMounted(() => {
   transition:
     opacity 0.2s,
     background 0.2s;
+}
+
+.content:hover + .shine {
+  transform: scale(1.03);
 }
 </style>
