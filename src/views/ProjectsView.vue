@@ -265,6 +265,7 @@ function getLinkIcon(type: string): string {
   border-radius: 24px;
   grid-column: span 1;
   grid-row: span 1;
+  cursor: pointer;
 }
 
 .project-card {
