@@ -177,6 +177,7 @@ function getLinkIcon(type: string): string {
         :data-id="project.id"
         @click="extendProject(project.id)"
         :no-hover="extendedProject === project.id"
+        :style="{ animationDelay: 0.4 + 0.15 * (Number(project.id) - 1) + 's' }"
       >
         <BaseCard class="project-card" no-hover>
           <img class="project-image" :src="getProjectImage(project.id)" alt="project image" />
@@ -225,6 +226,7 @@ function getLinkIcon(type: string): string {
   left: 50%;
   translate: -50%;
   margin-top: 64px;
+  animation: fadeInUp 0.8s ease-out both;
 }
 
 .projects-view-title::after {
@@ -266,6 +268,7 @@ function getLinkIcon(type: string): string {
   grid-column: span 1;
   grid-row: span 1;
   cursor: pointer;
+  animation: fadeInUp 0.8s ease-out 0.6s backwards;
 }
 
 .project-card {
