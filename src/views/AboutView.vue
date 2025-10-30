@@ -129,7 +129,7 @@ onMounted(() => {
           <svg width="40" height="400" viewBox="0 0 10 100" class="studies-svg">
             <defs>
               <linearGradient id="gradientStroke" x1="0%" y1="100%" x2="0%" y2="0%">
-                <stop offset="0%" stop-color="#ffffffff" />
+                <stop offset="0%" style="stop-color: #1d4ed8; stop-opacity: 0" />
                 <stop offset="40%" stop-color="#1d4ed8" />
                 <stop offset="100%" stop-color="#1d4ed8" />
               </linearGradient>
