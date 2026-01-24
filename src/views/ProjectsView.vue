@@ -54,14 +54,19 @@ const projects: Project[] = [
     id: '6',
     category: DIY,
   },
+  {
+    name: 'robot',
+    id: '7',
+    category: Robotics,
+  },
 ]
 
 const skillCategoriesColors: Record<SkillCategories, string> = {
   [Programming]: '#1565C0',
-  [DIY]: '#BF360C',
+  [DIY]: '#555555',
   [CAD]: '#C62828',
   [SoftSkills]: '#2E7D32',
-  [Robotics]: '#4527A0',
+  [Robotics]: '#704fcf',
 }
 
 const extendedProject = ref<string>('')
@@ -181,23 +186,27 @@ function getLinkIcon(type: string): string {
       >
         <BaseCard class="project-card" no-hover>
           <img class="project-image" :src="getProjectImage(project.id)" alt="project image" />
-          <h3 class="project-title">{{ $t(`projects.projects.${project.id}.name`) }}</h3>
-          <div class="project-links-container">
-            <a
-              v-for="(link, i) in project.links"
-              :key="i"
-              :href="link.url"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link"
-              @click.stop=""
-            >
-              <img :src="getLinkIcon(link.type)" :alt="link.type" />
-            </a>
+          <div class="project-card-header">
+            <h3 class="project-title">{{ $t(`projects.projects.${project.id}.name`) }}</h3>
+            <div class="project-links-container">
+              <a
+                v-for="(link, i) in project.links"
+                :key="i"
+                :href="link.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+                @click.stop=""
+              >
+                <img :src="getLinkIcon(link.type)" :alt="link.type" />
+              </a>
+            </div>
           </div>
+
           <p class="project-category" :style="{ color: skillCategoriesColors[project.category] }">
             {{ $t(`projects.projects.${project.id}.category`) }}
           </p>
+
           <p class="project-description">{{ $t(`projects.projects.${project.id}.description`) }}</p>
           <div class="project-article">
             <p
@@ -285,21 +294,28 @@ function getLinkIcon(type: string): string {
   object-fit: cover;
 }
 
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
 .project-links-container {
-  position: absolute;
-  right: 0;
-  top: 205px;
   display: flex;
   gap: 10px;
+  flex-grow: 1;
+  justify-content: end;
+  flex-shrink: 0;
 }
 
 .project-link img {
-  width: 1.4em;
   height: 1.4em;
+  aspect-ratio: 1;
+  width: auto;
 }
 
 .project-title {
-  margin-top: 0.5em;
   line-height: 1.2;
 }
 
@@ -342,11 +358,6 @@ function getLinkIcon(type: string): string {
 
 .extended .project-image {
   display: none;
-}
-
-.extended .project-links-container {
-  position: absolute;
-  top: 15px;
 }
 
 .extended .project-link img {

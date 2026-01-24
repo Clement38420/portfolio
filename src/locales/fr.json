@@ -40,7 +40,10 @@
         "webDevelopment": "Développement web",
         "python": "Python",
         "matlab": "Matlab",
-        "cppArduino": "C/C++/Arduino",
+        "rust": "Rust",
+        "ros2": "ROS2",
+        "cpp": "C/C++",
+        "kicad": "KiCad",
         "arcWelding": "Soudure à l'arc",
         "woodWork": "Travail du bois",
         "metalWork": "Travail du métal",
@@ -73,7 +76,6 @@
           "Ensuite, la page « À propos » est technique pour deux raisons. Premièrement, la carte 3D de la photo de profil : l’orientation de cette dernière est calculée en fonction de la position du curseur par rapport à la carte. Ensuite, un effet de brillance tourne sur la carte, de nouveau en fonction du curseur, pour accentuer l’effet 3D. Le deuxième aspect technique est le parcours animé à gauche de la description de mes études. C’est en fait une image SVG que j’ai créée dans le but de pouvoir être animée. C’est donc une balise « path » unique qui crée le tracé bleu. Ensuite, on décale le tracé pour le faire disparaître, et une fois la rubrique affichée, le tracé remonte pour donner cette illusion de progression.",
           "La dernière page technique est celle des projets. Le plus challengeant fut l’animation des cartes lorsqu’une d’entre elles s’agrandit. Pour cela, la solution que j’ai trouvée sur Internet est celle d’une animation FLIP (First Last Invert Play). Le principe est le suivant : on calcule la position des éléments avant de les déplacer (First), puis on les déplace et on regarde leur position finale (Last). Ensuite, on les remet instantanément à leur place initiale (Invert), puis, grâce au fait que l’on connaît leur position finale, on peut créer une animation qui les emmènera là où ils sont censés être (Play)."
         ]
-
       },
       "2": {
         "name": "Mini-moto",
@@ -100,15 +102,15 @@
         ]
       },
       "4": {
-        "name": "The Odin Project",
-        "description": "C'est un projet open-source qui propose un cours ultra complet pour apprendre le développement web full-stack.",
+        "name": "Cours full-stack Javascript",
+        "description": "Réalisation d'une série de projets complexes en autonomie suivant le parcours intensif de The Odin Project.",
         "category": "Développement web",
         "article": [
-          "The Odin Project est un cours open source maintenu par des développeurs, dont l’objectif est de donner à chacun les connaissances nécessaires pour devenir développeur full‑stack. Le contenu est en partie rédigé par les mainteneurs du projet, mais il renvoie aussi à de nombreuses ressources externes pour compléter les informations du site web. J’ai ajouté ce cours à mes projets car je le suis en parallèle de l’école depuis plus d’un an. J’arrive à m’y tenir grâce à son format, ponctué d’une multitude de projets servant à valider les compétences et à pratiquer les nouveaux acquis. Vous pouvez retrouver tous mes projets issus de ce cours sur ma page GitHub ; ils sont préfixés par le mot‑clé « odin‑ ».",
-          "Le cours commence par les fondamentaux de HTML, de CSS et de JavaScript, ainsi que, au‑delà du code, une première découverte de Git et de l’informatique appliquée au Web. Cette partie a été relativement rapide, car je possédais déjà ces bases, mais suffisamment complète pour m’apprendre de nouvelles choses.",
-          "Ensuite, il faut choisir entre deux parcours : d’un côté, développeur full‑stack JavaScript avec Node.js ; de l’autre, Ruby et Ruby on Rails. Comme j’étais plus à l’aise avec JavaScript, j’ai choisi le parcours basé sur Node.js. Ce chapitre comprend sept grandes sections dédiées, par exemple, à JavaScript, HTML et CSS, React, Node.js, ou même à la recherche d’un emploi à l’issue du cours.",
-          "Pour moi, les parties les plus plaisantes sont celles du front‑end, car les nouveaux apprentissages sont très visuels et il est facile de mesurer sa progression. Cependant, j’ai aussi une attirance pour le back‑end, où la structuration, la gestion des données et la rigueur sont essentielles. C’est pourquoi je suis ce cours, qui m’apprend à tout faire et à devenir développeur full‑stack. De plus, avec des frameworks comme Tauri ou Electron, être développeur web peut aussi signifier être développeur d’applications de bureau, ce qui accroît encore la polyvalence de ce cursus.",
-          "Actuellement, je suis dans le dernier chapitre technique du cours, dédié à Node.js. Après cela, je serai capable de créer une application web de A à Z."
+          "The Odin Project est un cursus open source maintenu par une communauté de développeurs, visant à former des profils full-stack opérationnels. Le contenu combine documentation interne et ressources externes de référence. J’ai mené ce projet à terme en parallèle de mes études pendant plus d’un an, grâce à sa pédagogie par la pratique. Chaque compétence a été validée par la réalisation de projets concrets, tous disponibles sur ma page GitHub avec le préfixe « odin- ».",
+          "Le parcours débute par les fondamentaux : HTML, CSS, JavaScript, ainsi qu'une introduction indispensable à Git et à l'environnement Linux. Bien que je possédais déjà certaines bases, cette étape m'a permis de consolider mes connaissances et d'adopter des standards professionnels dès le début.",
+          "J'ai ensuite opté pour la spécialisation Full-Stack JavaScript (Node.js), préférant cet écosystème à la voie Ruby on Rails qui me semble moins naturelle. Ce cycle approfondi est structuré en modules clés couvrant le JavaScript avancé, React pour le front-end (j'ai ici opté pour Vue.js qui me semble aussi plus naturel), et Node.js pour le back-end, tout en abordant les bonnes pratiques d'ingénierie logicielle.",
+          "J'ai pris beaucoup de plaisir sur la partie front-end grâce à la visualisation immédiate des résultats, tout en développant une rigueur essentielle pour le back-end et l'architecture des données. Cette double compétence me permet aujourd'hui de gérer l'ensemble de la stack technique. De plus, la maîtrise de ces technologies m'ouvre la porte du développement d'applications de bureau via un framework comme Tauri.",
+          "Aujourd'hui, ayant finalisé l'intégralité du cursus, je maîtrise la chaîne complète de développement. Je suis désormais capable de concevoir, développer et déployer une application web complexe de A à Z."
         ]
       },
       "5": {
@@ -131,6 +133,18 @@
           "Côté fabrication, ce ne fut pas de tout repos. À commencer par la précision nécessaire dans la fabrication des pièces et dans l’équerrage du châssis. En effet, sous l’effet de la soudure, l’acier a tendance à se déformer, ce qui m’a coûté de nombreuses reprises avant d’obtenir un cadre parfaitement rectangulaire.",
           "Enfin, j’ai découvert quelques problèmes mécaniques seulement une fois la fabrication terminée, ce qui n’est pas toujours agréable : une direction beaucoup trop courte, due à un mauvais calcul lors de la conception, ou un centre de masse trop reculé, qui faisait cabrer la voiture lors des accélérations.",
           "Finalement, ce projet est loin d’être terminé et mériterait encore de nombreuses améliorations. J’ai hâte de pouvoir m’y repencher pour continuer à bricoler ce véhicule plein de potentiel."
+        ]
+      },
+      "7": {
+        "name": "Robot modulaire",
+        "description": "Robot à deux roues conçu pour être modulaire et extensible, équipé d'un capteur LiDAR, d'un Raspberry Pi et d'un microcontrôleur.",
+        "category": "Robotique",
+        "article": [
+          "Ce projet de robot modulaire est réalisé dans le cadre d’un projet personnel visant à explorer le monde vaste de la robotique. L’objectif principal est de concevoir un robot capable de naviguer de manière autonome dans son environnement tout en étant facilement extensible pour intégrer de nouveaux capteurs et fonctionnalités (telle qu'une pince, une caméra des jeux de lumière etc.",
+          "Le robot est construit autour d’un châssis à deux roues motrices, offrant une bonne maniabilité. J’ai opté pour des moteurs à courant continu contrôlés par un microcontrôleur ESP32 (qui sera sûrement remplacée par une puce STM32). Celle-ci gère la partie physique et temps réel du robot (avec notamment FreeRTOS). Le microcontrôleur commande les moteurs, acquiert les données des capteurs et calcule la position du robot. Pour la navigation autonome, j’ai intégré un capteur LiDAR qui permet au robot de cartographier son environnement en temps réel et d’éviter les obstacles (en développement).",
+          "Le cerveau du robot est un Raspberry Pi, qui exécute des algorithmes de traitement de données et de prise de décision. J’ai utilisé ROS2 (Robot Operating System) pour faciliter la gestion des différentes tâches du robot et leur communication. Le Raspberry Pi communique avec le microcontrôleur via une liaison série pour envoyer des commandes et recevoir des données. Cette liaison est gérée par un protocole personnalisé que j’ai développé pour assurer une communication fiable et efficace entre les deux unités. (cf. projet Protocole de communication)",
+          "L’aspect modulaire du robot est assuré par l'extensivité du microcontrôleur (FreeRTOS) et du Raspberry Pi (ROS2), et par les différents espaces libres sur le châssis permettant d’ajouter facilement de nouveaux capteurs ou actionneurs. Par exemple, j’ai prévu des emplacements pour des caméras, des bandeaux LED, ou même des bras robotiques pour manipuler des objets.",
+          "Ce projet me permet d’approfondir concrètement mes compétences en électronique, programmation embarquée, et robotique mobile. Il reste encore beaucoup à faire pour améliorer les performances du robot, notamment en optimisant les algorithmes de navigation et en testant différentes configurations de capteurs."
         ]
       }
     }

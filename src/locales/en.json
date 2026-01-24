@@ -99,15 +99,15 @@
         ]
       },
       "4": {
-        "name": "The Odin Project",
-        "description": "An open-source project offering a very comprehensive course to learn full‑stack web development.",
+        "name": "Full-Stack JavaScript Course",
+        "description": "Completion of a series of complex autonomous projects following The Odin Project's intensive curriculum.",
         "category": "Web development",
         "article": [
-          "The Odin Project is an open‑source course maintained by developers with the goal of giving anyone the knowledge needed to become a full‑stack developer. The content is partly written by the maintainers, and also links to many external resources to complement the website. I added this course to my projects because I’ve been following it alongside school for over a year. I manage to stick with it thanks to its format, punctuated by many projects that validate skills and let you practice new concepts. You can find all my projects from the course on my GitHub; they are prefixed with the ‘odin‑’ keyword.",
-          "The course starts with the fundamentals of HTML, CSS, and JavaScript and, beyond code, an introduction to Git and computer science as applied to the Web. This part went fairly quickly because I already had the basics, but it was still complete enough for me to learn new things.",
-          "Next you choose between two paths: full‑stack JavaScript with Node.js, or Ruby and Ruby on Rails. Since I was more comfortable with JavaScript, I picked the Node.js track. This chapter contains seven major sections—on JavaScript, HTML & CSS, React, Node.js, and even how to find a job after the course.",
-          "My favorite parts are on the front end because the new knowledge is very visual and it’s easy to see your progress. I’m also drawn to the back end, where structure, data handling, and rigor are essential. That’s why I’m following this course: it teaches me to do it all and become a full‑stack developer. And with frameworks like Tauri or Electron, being a web developer can also mean building desktop apps, which further increases the course’s versatility.",
-          "I’m currently in the last technical chapter of the course, dedicated to Node.js. After that, I’ll be able to build a web application from A to Z."
+          "The Odin Project is an open-source curriculum maintained by a community of developers, aimed at training operational full-stack profiles. The content combines internal documentation and external reference resources. I completed this project in parallel with my studies over more than a year, thanks to its hands-on teaching approach. Each skill was validated by carrying out concrete projects, all available on my GitHub page with the 'odin-' prefix.",
+          "The path begins with the fundamentals: HTML, CSS, JavaScript, as well as an essential introduction to Git and the Linux environment. Although I already had some basics, this step allowed me to consolidate my knowledge and adopt professional standards from the start.",
+          "I then opted for the Full-Stack JavaScript (Node.js) specialization, preferring this ecosystem to the Ruby on Rails path, which seems less natural to me. This in-depth cycle is structured into key modules covering advanced JavaScript, React for the front-end (here I opted for Vue.js which also seems more natural to me), and Node.js for the back-end, while also addressing software engineering best practices.",
+          "I took great pleasure in the front-end part thanks to the immediate visualization of the results, while developing an essential rigor for the back-end and data architecture. This dual skill now allows me to manage the entire technical stack. In addition, mastering these technologies opens the door to desktop application development via a framework like Tauri.",
+          "Today, having completed the entire curriculum, I master the complete development chain. I am now able to design, develop, and deploy a complex web application from A to Z."
         ]
       },
       "5": {
@@ -130,6 +130,18 @@
           "On the manufacturing side, it wasn’t easy—from the precision required for the parts to squaring the chassis. Welding tends to warp steel, which cost me many reworks before I got a perfectly rectangular frame.",
           "Finally, I discovered some mechanical issues only after assembly—never pleasant: a steering ratio much too short due to a design miscalculation, and a center of mass too far back, which made the car pop a wheelie under acceleration.",
           "This project is far from finished and deserves many improvements. I can’t wait to get back to it and keep tinkering with this little vehicle full of potential."
+        ]
+      },
+      "7": {
+        "name": "Modular Robot",
+        "description": "A two-wheeled robot designed to be modular and expandable, equipped with a LiDAR sensor, a Raspberry Pi, and a microcontroller.",
+        "category": "Robotics",
+        "article": [
+          "This modular robot project is a personal endeavor to explore the vast world of robotics. The main goal is to design a robot capable of autonomously navigating its environment while being easily expandable to integrate new sensors and features (such as a gripper, a camera, lighting, etc.).",
+          "The robot is built around a two-wheeled chassis, providing good maneuverability. I opted for DC motors controlled by an ESP32 microcontroller (which will likely be replaced by an STM32 chip). This handles the physical and real-time aspects of the robot (notably with FreeRTOS). The microcontroller commands the motors, acquires sensor data, and calculates the robot's position. For autonomous navigation, I integrated a LiDAR sensor that allows the robot to map its environment in real-time and avoid obstacles (currently in development).",
+          "The robot's brain is a Raspberry Pi, which runs data processing and decision-making algorithms. I used ROS2 (Robot Operating System) to facilitate the management and communication of the robot's various tasks. The Raspberry Pi communicates with the microcontroller via a serial link to send commands and receive data. This link is managed by a custom protocol I developed to ensure reliable and efficient communication between the two units (see Communication Protocol project).",
+          "The modular aspect of the robot is ensured by the extensibility of the microcontroller (FreeRTOS) and the Raspberry Pi (ROS2), and by the free spaces on the chassis allowing for the easy addition of new sensors or actuators. For example, I have planned locations for cameras, LED strips, or even robotic arms to manipulate objects.",
+          "This project allows me to concretely deepen my skills in electronics, embedded programming, and mobile robotics. There is still much to be done to improve the robot's performance, particularly by optimizing navigation algorithms and testing different sensor configurations."
         ]
       }
     }

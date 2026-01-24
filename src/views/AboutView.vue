@@ -21,7 +21,9 @@ const skills = [
   skill('about.skills.items.webDevelopment', Programming),
   skill('about.skills.items.python', Programming),
   skill('about.skills.items.matlab', Programming),
-  skill('about.skills.items.cppArduino', Programming),
+  skill('about.skills.items.cpp', Programming),
+  skill('about.skills.items.rust', Programming),
+  skill('about.skills.items.ros2', Robotics),
   skill('about.skills.items.automation', Robotics),
   skill('about.skills.items.signalProcessing', Robotics),
   skill('about.skills.items.mechatronics', Robotics),
@@ -29,8 +31,9 @@ const skills = [
   skill('about.skills.items.woodWork', DIY),
   skill('about.skills.items.metalWork', DIY),
   skill('about.skills.items.electronics', DIY),
-  skill('about.skills.items.3dPrinting', CAD),
+  skill('about.skills.items.3dPrinting', DIY),
   skill('about.skills.items.solidworks', CAD),
+  skill('about.skills.items.kicad', CAD),
   skill('about.skills.items.teamwork', SoftSkills),
   skill('about.skills.items.sociability', SoftSkills),
   skill('about.skills.items.problemSolving', SoftSkills),
@@ -38,10 +41,10 @@ const skills = [
 
 const skillCategoriesColors: Record<SkillCategories, string> = {
   [Programming]: '#1565C0',
-  [DIY]: '#BF360C',
+  [DIY]: '#555555',
   [CAD]: '#C62828',
   [SoftSkills]: '#2E7D32',
-  [Robotics]: '#4527A0',
+  [Robotics]: '#704fcf',
 }
 
 function updateScrollAnimations() {
