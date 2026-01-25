@@ -77,7 +77,7 @@
       "2": {
         "name": "Mini motorbike",
         "description": "A mini-motorbike project that I designed and built entirely.",
-        "category": "DIY / Mechanics",
+        "category": "DIY / Mechanics / CAD",
         "article": [
           "This mini motorbike project is my second real DIY/mechanics build. As a teenager I always dreamed of owning a motorbike or any motorized vehicle—hence my first engine-powered drift trike (not shown here). Since I also love tinkering, building the bike myself made it even more appealing.",
           "I designed the plans in Fusion 360 before heading to the workshop to build the frame. Of course, I first had to source all the parts and size the frame accordingly. Starting from the engine and adding steel tubes around it, after several iterations I arrived at the final chassis.",
@@ -123,7 +123,7 @@
       "6": {
         "name": "Mini car",
         "description": "A two‑seater steel car designed in SolidWorks and built in my workshop.",
-        "category": "DIY / Mechanics",
+        "category": "DIY / Mechanics / CAD",
         "article": [
           "Here’s my latest big DIY project: a little two‑seater car. The initial idea was to build a vehicle that looks like a Jeep, like in the movies—I found the style and bodywork approachable to make. The first constraint was budget, which forced technical choices. For example, the vehicle has no suspension; adding them would have blown the budget. Some parts were undersized too—like the rear axle shaft, which eventually snapped. Despite all that, it was an extremely formative project.",
           "First came the design in SolidWorks. It’s a reference CAD tool, and learning more pays off. I learned to use more advanced features like weldments directly in the software, and 2D drawings, which were critical when manufacturing the parts.",
@@ -142,6 +142,19 @@
           "The robot's brain is a Raspberry Pi, which runs data processing and decision-making algorithms. I used ROS2 (Robot Operating System) to facilitate the management and communication of the robot's various tasks. The Raspberry Pi communicates with the microcontroller via a serial link to send commands and receive data. This link is managed by a custom protocol I developed to ensure reliable and efficient communication between the two units (see Communication Protocol project).",
           "The modular aspect of the robot is ensured by the extensibility of the microcontroller (FreeRTOS) and the Raspberry Pi (ROS2), and by the free spaces on the chassis allowing for the easy addition of new sensors or actuators. For example, I have planned locations for cameras, LED strips, or even robotic arms to manipulate objects.",
           "This project allows me to concretely deepen my skills in electronics, embedded programming, and mobile robotics. There is still much to be done to improve the robot's performance, particularly by optimizing navigation algorithms and testing different sensor configurations."
+        ]
+      },
+      "8": {
+        "name": "Serial Communication Protocol",
+        "description": "Development of a custom protocol for serial communication.",
+        "category": "Computer Science",
+        "article": [
+          "As part of my modular robot project, I developed a custom protocol for serial communication. This protocol is designed to be reliable, efficient, and modular, allowing users to easily adapt it to different types of data and commands.",
+          "The protocol uses a COBS algorithm for reliable message identification. Additionally, it integrates a CRC16 (Modbus) check to ensure message integrity. This part of the protocol (the framing) is handled by the beta_com library I developed in C. The message serialization/deserialization part is handled by the beta_protoc library, which allows for defining structured messages efficiently.",
+          "Thus, beta_protoc provides the user with a message compiler that generates the necessary code to serialize and deserialize messages defined in a .json file. The protocol supports several data types, including integers, floats, strings, and arrays. Furthermore, it allows for the definition of nested messages and lists of messages, offering great flexibility in data structuring.",
+          "The chosen format for the communication frame allows for efficient data transmission while minimizing overhead. Each message begins with a header containing information about the message type and its length, followed by the serialized data, which itself consists of several fields according to the message definition, with their own header defining their identifier and size.",
+          "This protocol was designed for use in embedded systems where communication reliability and efficiency are crucial. It is particularly suitable for robotics applications, where multiple microcontrollers/computers need to exchange data in real-time.",
+          "This project is still under development and is available on my GitHub page."
         ]
       }
     }

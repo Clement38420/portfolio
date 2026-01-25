@@ -59,6 +59,17 @@ const projects: Project[] = [
     id: '7',
     category: Robotics,
   },
+  {
+    name: 'communication-protocol',
+    id: '8',
+    category: Programming,
+    links: [
+      {
+        type: 'github',
+        url: 'https://github.com/Clement38420?tab=repositories&q=beta&type=&language=&sort=',
+      },
+    ],
+  },
 ]
 
 const skillCategoriesColors: Record<SkillCategories, string> = {

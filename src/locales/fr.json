@@ -80,7 +80,7 @@
       "2": {
         "name": "Mini-moto",
         "description": "Un projet de mini-moto que j'ai conçue et réalisée entièrement.",
-        "category": "Bricolage / Mécanique",
+        "category": "Bricolage / Mécanique / CAO",
         "article": [
           "Ce projet de mini-moto est mon deuxième vrai projet de bricolage et de mécanique. En étant ado, j’ai toujours rêvé d’avoir une moto, ou du moins un véhicule motorisé, d’où mon premier projet de drift-trike à moteur (non présenté dans ce portfolio). De plus, comme je suis aussi passionné par le bricolage, l’idée d’avoir une moto serait encore plus intéressante si c’était moi qui la construisais.",
           "Ainsi, j’ai conçu les plans de cette moto sur Fusion 360 avant de passer à l’atelier pour fabriquer le châssis. Bien sûr, avant de démarrer les plans, il a fallu rechercher toutes les pièces dont j’avais besoin pour concevoir le cadre en fonction. En partant donc du moteur et en ajoutant les tubes d’acier autour de lui, j’ai abouti, après plusieurs modifications, au châssis final de mon véhicule.",
@@ -126,7 +126,7 @@
       "6": {
         "name": "Mini-voiture",
         "description": "Voiture deux places en acier que j'ai conçue sur SolidWorks et fabriquée dans mon atelier.",
-        "category": "Bricolage / Mécanique",
+        "category": "Bricolage / Mécanique / CAO",
         "article": [
           "Voici mon dernier grand projet de bricolage : une voiturette à deux places. L’idée première était de fabriquer un véhicule ressemblant à une Jeep, comme on en voit dans les films. J’en trouvais le style et la carrosserie abordables à fabriquer. Le premier souci auquel j’ai été confronté a été le budget : il a fallu faire des choix techniques. Par exemple, mon véhicule ne comporte aucune suspension ; elles auraient ajouté des pièces qui auraient fait exploser mon budget. De plus, certaines pièces ont été sous‑dimensionnées, comme l’arbre d’entraînement des roues arrière, qui a fini par rompre. Malgré tout cela, ce fut un projet extrêmement formateur.",
           "Premièrement, la conception sous SolidWorks. Ce logiciel est une référence de la CAO, et en apprendre davantage ne peut être que bénéfique. J’ai ainsi appris à utiliser des fonctions plus avancées, comme la mécano‑soudure, disponible directement dans le logiciel, ou la mise en plan, déterminante lors de la fabrication des pièces de la voiture.",
@@ -145,6 +145,19 @@
           "Le cerveau du robot est un Raspberry Pi, qui exécute des algorithmes de traitement de données et de prise de décision. J’ai utilisé ROS2 (Robot Operating System) pour faciliter la gestion des différentes tâches du robot et leur communication. Le Raspberry Pi communique avec le microcontrôleur via une liaison série pour envoyer des commandes et recevoir des données. Cette liaison est gérée par un protocole personnalisé que j’ai développé pour assurer une communication fiable et efficace entre les deux unités. (cf. projet Protocole de communication)",
           "L’aspect modulaire du robot est assuré par l'extensivité du microcontrôleur (FreeRTOS) et du Raspberry Pi (ROS2), et par les différents espaces libres sur le châssis permettant d’ajouter facilement de nouveaux capteurs ou actionneurs. Par exemple, j’ai prévu des emplacements pour des caméras, des bandeaux LED, ou même des bras robotiques pour manipuler des objets.",
           "Ce projet me permet d’approfondir concrètement mes compétences en électronique, programmation embarquée, et robotique mobile. Il reste encore beaucoup à faire pour améliorer les performances du robot, notamment en optimisant les algorithmes de navigation et en testant différentes configurations de capteurs."
+        ]
+      },
+      "8": {
+        "name": "Protocole de communication série",
+        "description": "Développement d'un protocole personnalisé destiné à la communication série.",
+        "category": "Informatique",
+        "article": [
+          "Dans le cadre de mon projet de robot modulaire, j’ai développé un protocole personnalisé destiné à la communication série. Ce protocole est conçu pour être fiable, efficace et modulaire, permettant à ses utilisateurs de l’adapter facilement à différents types de données et de commandes.",
+          "Le protocole utilise un algorithme de COBS pour identification des messages fiable. De plus il intègre une vérification par CRC16 (Modbus) assurant la conformité du message. Cette partie du protocole (le framing) est assurée par la bibliothèque beta_com que j'ai développée en C. La partie serialisation/déserialisation des messages est assurée par la bibliothèque beta_protoc, qui permet de définir des messages structurés de manière efficace.",
+          "Ainsi, beta_protoc fournit à l'utilisateur un compilateur de messages qui génère le code nécessaire pour sérialiser et désérialiser les messages définis dans un fichier .json. Le protocole supporte plusieurs types de données, y compris les entiers, les flottants, les chaînes de caractères, et les tableaux. De plus, il permet la définition de messages imbriqués et de listes de messages, offrant une grande flexibilité dans la structuration des données.",
+          "Le format choisi pour la trame de communication permet une transmission efficace des données tout en minimisant la surcharge. Chaque message commence par un en-tête contenant des informations sur le type de message et sa longueur, suivi des données sérialisées, qui sont elles-même constituées de plusieurs champs selon la définition du message, avec leur propre en-tête définissant leur identificateur et leur taille.",
+          "Ce protocole a été conçu pour être utilisé dans des systèmes embarqués où la fiabilité et l'efficacité de la communication sont cruciales. Il est particulièrement adapté aux applications robotiques, où plusieurs microcontrôleurs/ordinateurs doivent échanger des données en temps réel.",
+          "Ce projet est encore en développement et est disponible sur ma page GitHub."
         ]
       }
     }
