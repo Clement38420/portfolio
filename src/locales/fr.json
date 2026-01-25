@@ -159,6 +159,16 @@
           "Ce protocole a été conçu pour être utilisé dans des systèmes embarqués où la fiabilité et l'efficacité de la communication sont cruciales. Il est particulièrement adapté aux applications robotiques, où plusieurs microcontrôleurs/ordinateurs doivent échanger des données en temps réel.",
           "Ce projet est encore en développement et est disponible sur ma page GitHub."
         ]
+      },
+      "9": {
+        "name": "DASH - Application de messagerie",
+        "description": "Application de messagerie instantanée full-stack développée avec Nuxt 4, Drizzle ORM et PostgreSQL.",
+        "category": "Développement Web Full-Stack",
+        "article": [
+          "Ce projet, baptisé 'DASH', est une application de messagerie complète construite sur la toute dernière version de Nuxt 4. L'objectif était d'exploiter les fonctionnalités les plus récentes de l'écosystème Vue 3. Pour l'interface utilisateur, j'ai fait le choix d'intégrer TailwindCSS v4 (via Vite), ce qui permet une gestion du style ultra-performante et moderne. L'application gère l'authentification, les conversations en temps réel et le stockage persistant.",
+          "L'architecture backend repose sur une base de données PostgreSQL, manipulée via Drizzle ORM pour une sécurité de typage maximale (TypeScript). La conception du schéma de base de données a présenté plusieurs défis intéressants, notamment la gestion unifiée des conversations privées et de groupe. Pour optimiser les performances, j'ai mis en place un système de 'fingerprint' unique : une empreinte générée à partir des identifiants des participants qui permet de vérifier instantanément l'existence d'une conversation sans avoir à effectuer de jointures coûteuses sur les tables de liaison.",
+          "La sécurité et la fiabilité des données sont au cœur du développement. J'utilise Zod pour une validation stricte des données à l'exécution (runtime), tant côté API que côté client. L'authentification est gérée via des JSON Web Tokens (JWT) et les mots de passe sont hachés avec bcrypt. Côté frontend, la gestion de l'état global de l'application est assurée par Pinia, ce qui facilite la synchronisation des messages et la réactivité de l'interface utilisateur, notamment pour des fonctionnalités comme les accusés de lecture ('lastSeenAt')."
+        ]
       }
     }
   }

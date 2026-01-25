@@ -70,6 +70,17 @@ const projects: Project[] = [
       },
     ],
   },
+  {
+    name: 'dash',
+    id: '9',
+    category: Programming,
+    links: [
+      {
+        type: 'github',
+        url: 'https://github.com/Clement38420/odin-messaging-app',
+      },
+    ],
+  },
 ]
 
 const skillCategoriesColors: Record<SkillCategories, string> = {

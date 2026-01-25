@@ -156,6 +156,16 @@
           "This protocol was designed for use in embedded systems where communication reliability and efficiency are crucial. It is particularly suitable for robotics applications, where multiple microcontrollers/computers need to exchange data in real-time.",
           "This project is still under development and is available on my GitHub page."
         ]
+      },
+      "9": {
+        "name": "DASH - Messaging App",
+        "description": "Full-stack instant messaging application built with Nuxt 4, Drizzle ORM, and PostgreSQL.",
+        "category": "Full-Stack Web Development",
+        "article": [
+          "This project, named 'DASH', is a comprehensive messaging application built on the very latest version of Nuxt 4. The goal was to leverage the most recent features of the Vue 3 ecosystem. For the user interface, I chose to integrate TailwindCSS v4 (via Vite), enabling ultra-performant and modern styling. The application handles authentication, real-time conversations, and persistent storage.",
+          "The backend architecture relies on a PostgreSQL database, managed via Drizzle ORM for maximum type safety (TypeScript). Designing the database schema presented several interesting challenges, particularly the unified handling of private and group conversations. To optimize performance, I implemented a unique 'fingerprint' system: a hash generated from participant IDs that allows for instant verification of a conversation's existence without performing costly joins on linking tables.",
+          "Data security and reliability are at the core of the development. I use Zod for strict runtime data validation, both on the API and client sides. Authentication is managed via JSON Web Tokens (JWT), and passwords are hashed using bcrypt. On the frontend, global application state is handled by Pinia, facilitating message synchronization and UI reactivity, especially for features like read receipts ('lastSeenAt')."
+        ]
       }
     }
   }
