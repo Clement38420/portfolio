@@ -23,6 +23,8 @@ const skills = [
   skill('about.skills.items.matlab', Programming),
   skill('about.skills.items.cpp', Programming),
   skill('about.skills.items.rust', Programming),
+  skill('about.skills.items.embeddedSystems', Programming),
+  skill('about.skills.items.linux', Programming),
   skill('about.skills.items.ros2', Robotics),
   skill('about.skills.items.automation', Robotics),
   skill('about.skills.items.signalProcessing', Robotics),

@@ -44,6 +44,8 @@
         "ros2": "ROS2",
         "cpp": "C/C++",
         "kicad": "KiCad",
+        "linux": "Linux",
+        "embeddedSystems": "Systèmes embarqués",
         "arcWelding": "Soudure à l'arc",
         "woodWork": "Travail du bois",
         "metalWork": "Travail du métal",
