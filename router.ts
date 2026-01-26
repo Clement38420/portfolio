@@ -14,4 +14,7 @@ const routes = [
 export const router = createRouter({
   history: createMemoryHistory(),
   routes,
+  scrollBehavior() {
+    return { top: 0 }
+  },
 })
