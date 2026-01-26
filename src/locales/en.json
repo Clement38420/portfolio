@@ -32,6 +32,7 @@
         "ros2": "ROS2",
         "rust": "Rust",
         "linux": "Linux",
+        "git": "Git",
         "kicad": "KiCad",
         "arcWelding": "Arc Welding",
         "woodWork": "Wood work",

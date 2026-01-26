@@ -45,6 +45,7 @@
         "cpp": "C/C++",
         "kicad": "KiCad",
         "linux": "Linux",
+        "git": "Git",
         "embeddedSystems": "Systèmes embarqués",
         "arcWelding": "Soudure à l'arc",
         "woodWork": "Travail du bois",
