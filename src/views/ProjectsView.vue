@@ -79,6 +79,10 @@ const projects: Project[] = [
         type: 'github',
         url: 'https://github.com/Clement38420/odin-messaging-app',
       },
+      {
+        type: 'dash',
+        url: 'https://dash.clement-charbonnel.com/',
+      },
     ],
   },
 ]
