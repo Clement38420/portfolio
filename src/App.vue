@@ -10,20 +10,6 @@ import NavBar from './components/NavBar.vue'
 </template>
 
 <style>
-@font-face {
-  font-family: Calibri;
-  src: url('./assets/fonts/Calibri/calibri.woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Calibri;
-  src: url('./assets/fonts/Calibri/calibri_bold.woff2');
-  font-weight: bold;
-  font-style: normal;
-}
-
 :root {
   --bg-color: hsl(0, 0%, 95%);
   --bg-light-color: hsl(0, 0%, 100%);
@@ -39,7 +25,7 @@ import NavBar from './components/NavBar.vue'
 
 body {
   background-color: var(--bg-dark-color);
-  font-family: Calibri, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: var(--text-color);
   font-size: clamp(1rem, 3vw, 1.2rem);
 }

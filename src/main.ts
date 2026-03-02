@@ -9,6 +9,8 @@ import '@fontsource/inter/400.css'
 import '@fontsource/inter/600.css'
 import '@fontsource/inter/700.css'
 import '@fontsource/inter/800.css'
+import '@fontsource/open-sans/400.css'
+import '@fontsource/open-sans/700.css'
 
 const i18n = createI18n({
   legacy: false,

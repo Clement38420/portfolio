@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.8",
+    "@fontsource/open-sans": "^5.2.7",
     "vue": "^3.5.18",
     "vue-i18n": "^11.1.12",
     "vue-router": "^4.5.1"
