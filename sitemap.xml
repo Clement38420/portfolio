@@ -4,4 +4,16 @@
         <loc>https://portfolio.clement-charbonnel.com/</loc>
         <changefreq>monthly</changefreq>
     </url>
+    <url>
+        <loc>https://portfolio.clement-charbonnel.com/about</loc>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://portfolio.clement-charbonnel.com/projects</loc>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://portfolio.clement-charbonnel.com/contact</loc>
+        <changefreq>monthly</changefreq>
+    </url>
 </urlset>
