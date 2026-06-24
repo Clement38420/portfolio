@@ -1,4 +1,4 @@
-import { createRouter, createMemoryHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from './src/views/HomeView.vue'
 import AboutView from './src/views/AboutView.vue'
 import ContactView from './src/views/ContactView.vue'
@@ -12,7 +12,7 @@ const routes = [
 ]
 
 export const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes,
   scrollBehavior() {
     return { top: 0 }
