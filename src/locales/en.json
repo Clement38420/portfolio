@@ -48,6 +48,7 @@
     },
     "studies": {
       "title": "My academic background",
+      "tecnico": "Master 2 international in the fields of robotics, AI, and computer vision at Instituto Superior Técnico in Lisbon.",
       "ense3": "Engineering degree in the Automatic and Intelligent Systems (ASI) track. Specialized in mechatronics, automation, electronics, signal processing.",
       "cpge": "Preparatory classes for French engineering schools (CPGE) specialized in Mathematics, Physics and Engineering Sciences (PCSI/PSI)."
     }

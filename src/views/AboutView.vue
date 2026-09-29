@@ -132,7 +132,7 @@ onMounted(() => {
       <BaseCard class="section-card studies scroll-animated" no-hover>
         <h3 class="title studies-title">{{ $t('about.studies.title') }}</h3>
         <div class="content">
-          <svg width="40" height="400" viewBox="0 0 10 100" class="studies-svg">
+          <svg width="60" height="600" viewBox="0 0 10 100" class="studies-svg">
             <defs>
               <linearGradient id="gradientStroke" x1="0%" y1="100%" x2="0%" y2="0%">
                 <stop offset="0%" style="stop-color: #1d4ed8; stop-opacity: 0" />
@@ -141,23 +141,34 @@ onMounted(() => {
               </linearGradient>
             </defs>
             <path
-              d="M 5 100
-               q -5 -10 0 -20 t 0 -14 t 0 -12
-               a 2 2 0 0 0 0 -4
-               a 2 2 0 0 0 0 4
-               a 2 2 0 0 0 0 -4
-               q 5 -8 0 -10 t 0 -10 t 0 -14 t 0 -10
-               a 2 2 0 0 0 0 -4
-               a 2 2 0 0 0 0 4"
+              d="M 5 93
+       q -4 -10 0 -16 t 0 -10
+       a 2 2 0 0 0 0 -4
+       a 2 2 0 0 0 0 4
+       a 2 2 0 0 0 0 -4
+       q 4 -10 0 -16 t 0 -10
+       a 2 2 0 0 0 0 -4
+       a 2 2 0 0 0 0 4
+       a 2 2 0 0 0 0 -4
+       q -4 -10 0 -16 t 0 -10
+       a 2 2 0 0 0 0 -4
+       a 2 2 0 0 0 0 4"
               stroke="url(#gradientStroke)"
               fill="transparent"
               stroke-linecap="round"
-              stroke-width="0.8"
-              stroke-dasharray="131"
-              stroke-dashoffset="131"
+              stroke-width="0.6"
+              stroke-dasharray="150"
+              stroke-dashoffset="150"
             />
           </svg>
           <ul class="studies-list">
+            <li class="studies-item tecnico">
+              <h4 class="school">Instituto Superior Técnico, Lisboa</h4>
+              <p class="dates">2026-2027</p>
+              <p class="description">
+                {{ $t('about.studies.tecnico') }}
+              </p>
+            </li>
             <li class="studies-item ense3">
               <h4 class="school">Grenoble INP - Ense3</h4>
               <p class="dates">2024-2027</p>
@@ -396,13 +407,13 @@ onMounted(() => {
 }
 
 .studies-svg {
-  width: 40px;
-  height: 400px;
+  width: 60px;
+  height: 600px;
   flex: none;
 }
 
 .studies-svg path {
-  animation: drawLine 3s ease-out var(--animation-delay) forwards;
+  animation: drawLine 5s cubic-bezier(0.61, 1, 0.88, 1) var(--animation-delay) forwards;
 }
 
 @keyframes drawLine {
@@ -430,14 +441,19 @@ onMounted(() => {
   color: var(--text-muted);
 }
 
+.studies-item.tecnico {
+  top: 15px;
+  animation: appear 1s ease calc(var(--animation-delay) + 3.4s) both;
+}
+
 .studies-item.ense3 {
-  top: 5px;
-  animation: appear 1s ease calc(var(--animation-delay) + 2.3s) both;
+  top: 196px;
+  animation: appear 1s ease calc(var(--animation-delay) + 1.8s) both;
 }
 
 .studies-item.cpge {
-  top: 198px;
-  animation: appear 1s ease calc(var(--animation-delay) + 0.8s) both;
+  top: 376px;
+  animation: appear 1s ease calc(var(--animation-delay) + 0.5s) both;
 }
 
 @keyframes appear {
