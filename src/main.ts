@@ -2,6 +2,7 @@ import { createApp, watch } from 'vue'
 import App from './App.vue'
 import { createI18n } from 'vue-i18n'
 import { router } from '../router.ts'
+import { createHead } from '@unhead/vue/client'
 import fr from './locales/fr.json'
 import en from './locales/en.json'
 import '@fontsource/inter/300.css'
@@ -27,6 +28,7 @@ const app = createApp(App)
 
 app.use(i18n)
 app.use(router)
+app.use(createHead())
 app.mount('#app')
 
 watch(

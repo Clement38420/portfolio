@@ -1,5 +1,20 @@
 <script setup lang="ts">
+import { useHead } from '@unhead/vue'
+import { useRoute } from 'vue-router'
 import NavBar from './components/NavBar.vue'
+
+const route = useRoute()
+
+useHead(() => ({
+  title: (route.meta.title as string) ?? 'Clément Charbonnel - Portfolio',
+  meta: [
+    { name: 'description', content: (route.meta.description as string) ?? '' },
+    { property: 'og:title', content: (route.meta.title as string) ?? '' },
+    { property: 'og:description', content: (route.meta.description as string) ?? '' },
+    { property: 'og:url', content: `https://portfolio.clement-charbonnel.fr${route.path}` },
+  ],
+  link: [{ rel: 'canonical', href: `https://portfolio.clement-charbonnel.fr${route.path}` }],
+}))
 </script>
 
 <template>
