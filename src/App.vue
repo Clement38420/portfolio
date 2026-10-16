@@ -22,6 +22,14 @@ import NavBar from './components/NavBar.vue'
   --card-shadow-high: 5px 5px 0 hsl(45, 25%, 82%);
 }
 
+html {
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background-color: var(--bg-page-color);
   font-family: 'Open Sans', sans-serif;
