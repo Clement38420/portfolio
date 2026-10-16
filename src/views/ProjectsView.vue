@@ -81,7 +81,7 @@ const projects: Project[] = [
       },
       {
         type: 'dash',
-        url: 'https://dash.clement-charbonnel.com/',
+        url: 'https://dash.clement-charbonnel.fr/',
       },
     ],
   },
