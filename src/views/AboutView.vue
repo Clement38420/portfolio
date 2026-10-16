@@ -77,6 +77,9 @@ onMounted(() => {
     <div class="hero">
       <BaseCard class="section-card hero-card" no-hover>
         <h2 class="title about-title">{{ $t('about.title') }}</h2>
+        <a class="cv-link link" href="/cv.pdf" target="_blank" rel="noopener">
+          {{ $t('about.cv') }}
+        </a>
         <i18n-t keypath="about.description" tag="p" class="description">
           <template v-slot:ense3-link>
             <a
@@ -86,6 +89,16 @@ onMounted(() => {
               rel="noopener"
             >
               Grenoble INP - Ense3
+            </a>
+          </template>
+          <template v-slot:tecnico-link>
+            <a
+              class="tecnico-link link"
+              href="https://tecnico.ulisboa.pt/en/"
+              target="_blank"
+              rel="noopener"
+            >
+              Instituto Superior Técnico
             </a>
           </template>
           <template v-slot:projects-link>
@@ -244,7 +257,7 @@ onMounted(() => {
 }
 
 .hero {
-  --portrait-width: 500px;
+  --portrait-width: 550px;
   --header-height: max(60vh, 500px);
 
   position: relative;
@@ -286,6 +299,11 @@ onMounted(() => {
 .description {
   line-height: 1.5;
   margin-right: 64px;
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.cv-link {
+  translate: 0 -20px;
   animation: fadeInUp 0.6s ease-out 0.3s both;
 }
 

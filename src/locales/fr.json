@@ -24,7 +24,8 @@
   },
   "about": {
     "title": "À propos de moi",
-    "description": "Je m'appelle Clément Charbonnel, j'ai 21 ans et je suis étudiant en 2ème année d'école d'ingénieur à {ense3-link}. Mes études se concentrent sur la mécatronique, l'automatique, et la robotique. En dehors de l'école, je suis passionné par la mécanique, le bricolage, l'informatique et le sport. Grâce à mes passions, j'adore me lancer dans de nouveaux {projects-link} pour développer mes compétences et apprendre de nouvelles choses. Mais j'ai toujours besoin d'un peu de tennis, de rugby ou de vélo pour me détendre !",
+    "cv": "Mon CV",
+    "description": "Je m'appelle Clément Charbonnel, j'ai 22 ans et je suis étudiant en dernière année d'école d'ingénieur à {ense3-link}. De plus, je suis actuellement en Erasmus de 5 mois à Lisbonne au sein de l'{tecnico-link}. Mes études se concentrent sur la mécatronique, l'automatique, et la robotique. En dehors de l'école, je suis passionné par la mécanique, le bricolage, l'informatique et le sport. Grâce à mes passions, j'adore me lancer dans de nouveaux {projects-link} pour développer mes compétences et apprendre de nouvelles choses. Mais j'ai toujours besoin d'un peu de tennis, de rugby ou de vélo pour me détendre !",
     "skills": {
       "title": "Mes compétences",
       "categories": {

@@ -11,7 +11,8 @@
   },
   "about": {
     "title": "About me",
-    "description": "My name is Clément Charbonnel, I am 21 years old and a second-year engineering student at {ense3-link}. My studies focus on mechatronics, automation, and robotics. Outside of school, I am passionate about mechanics, DIY, computer science, and sports. Thanks to my passions, I love starting new {projects-link} to develop my skills and learn new things. But I always need a bit of tennis, rugby, or cycling to relax!",
+    "cv": "My CV",
+    "description": "My name is Clément Charbonnel, I am 22 years old and a last-year engineering student at {ense3-link}. Beside that I am currently continuing my studies in Lisbon at {tecnico-link} as a part of my Erasmus program. My studies focus on mechatronics, automation, and robotics. Outside of school, I am passionate about mechanics, DIY, computer science, and sports. Thanks to my passions, I love starting new {projects-link} to develop my skills and learn new things. But I always need a bit of tennis, rugby, or cycling to relax!",
     "skills": {
       "title": "My skills",
       "categories": {
