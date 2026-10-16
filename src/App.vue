@@ -13,15 +13,13 @@ import NavBar from './components/NavBar.vue'
 :root {
   --bg-color: hsl(45, 20%, 94%);
   --bg-light-color: hsl(45, 65%, 98%);
-  --bg-dark-color: hsl(45, 18%, 88%);
+  --bg-dark-color: hsl(45, 15%, 83%);
   --bg-page-color: hsl(45, 40%, 99%);
 
   --text-color: hsl(45, 12%, 7%);
   --text-muted: hsl(45, 10%, 42%);
 
-  --card-shadow: 0 2px 2px 0 rgba(60, 45, 15, 0.2), 0 4px 4px 0 rgba(60, 45, 15, 0.07);
-  --card-shadow-close: 0 2px 2px 0 rgba(60, 45, 15, 0.1);
-  --card-shadow-high: 0 2px 4px 0 rgba(60, 45, 15, 0.2), 0 8px 12px 0 rgba(60, 45, 15, 0.1);
+  --card-shadow-high: 5px 5px 0 hsl(45, 25%, 82%);
 }
 
 body {
@@ -34,7 +32,14 @@ body {
 .view-background {
   position: fixed;
   inset: 70px 0 0 0;
-  background: linear-gradient(180deg, #ffffff 0%, hsl(46, 70%, 97%) 85%);
+  background-image:
+    linear-gradient(rgba(120, 100, 60, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 100, 60, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, #ffffff 0%, hsl(46, 70%, 97%) 85%);
+  background-size:
+    40px 40px,
+    40px 40px,
+    100% 100%;
   z-index: -1;
 }
 

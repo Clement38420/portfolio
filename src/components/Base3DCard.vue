@@ -57,7 +57,6 @@ onMounted(() => {
 
 <style scoped>
 .card {
-  box-shadow: var(--card-shadow);
   position: relative;
 }
 
@@ -74,7 +73,7 @@ onMounted(() => {
 
 @media (hover: hover) {
   .content:hover {
-    transform: scale(1.03);
+    transform: translate(-5px, -5px);
     box-shadow: var(--card-shadow-high);
   }
 }
@@ -92,6 +91,6 @@ onMounted(() => {
 }
 
 .content:hover + .shine {
-  transform: scale(1.03);
+  transform: translate(-5px, -5px);
 }
 </style>

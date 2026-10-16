@@ -273,7 +273,6 @@ function getLinkIcon(type: string): string {
   width: 80px;
   height: 4px;
   background: linear-gradient(90deg, #3b82f6, #1d4ed8);
-  border-radius: 2px;
   transform-origin: center;
   animation: grow 0.8s ease-out 0.5s both;
 }
@@ -299,7 +298,6 @@ function getLinkIcon(type: string): string {
 }
 
 .project-card-3d {
-  border-radius: 24px;
   grid-column: span 1;
   grid-row: span 1;
   cursor: pointer;
@@ -314,7 +312,6 @@ function getLinkIcon(type: string): string {
 }
 
 .project-image {
-  border-radius: 18px;
   width: 100%;
   height: 185px;
   object-fit: cover;

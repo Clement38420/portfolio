@@ -41,9 +41,6 @@ import HomeBubbles from '@/components/HomeBubbles.vue'
 
 h2 {
   font-size: clamp(2.5rem, 8vw, 6rem);
-  filter: drop-shadow(0 4px 12px rgba(96, 165, 250, 0.3))
-    drop-shadow(0 0 20px rgba(96, 165, 250, 0.2));
-  text-shadow: 0 0 6px hsla(224, 76%, 48%, 0.3);
   animation: 0.7s ease-out 0.1s fadeInUp;
   animation-fill-mode: both;
   margin: 0;

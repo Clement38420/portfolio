@@ -225,7 +225,6 @@ onMounted(() => {
   width: 120px;
   height: 4px;
   background: linear-gradient(90deg, #3b82f6, #2563eb);
-  border-radius: 2px;
   transform-origin: center left;
   animation: grow 0.6s ease-out 0.9s both;
 }
@@ -278,7 +277,6 @@ onMounted(() => {
   align-self: center;
   width: var(--portrait-width);
   aspect-ratio: 0.9 / 1;
-  border-radius: 15px;
   position: absolute;
   right: 0;
   z-index: 1;
@@ -376,7 +374,6 @@ onMounted(() => {
 }
 
 .skill-item {
-  border-radius: 10000px;
   border: 1px solid;
   padding: 0.7em 1em;
   font-weight: bold;
@@ -389,8 +386,8 @@ onMounted(() => {
 }
 
 .skill-item:hover {
-  box-shadow: var(--card-shadow);
-  transform: translateY(-2px) scale(1.03);
+  box-shadow: 3px 3px 0 var(--bg-dark-color);
+  transform: translate(-2px, -2px);
 }
 
 .skills-legend {
@@ -488,7 +485,6 @@ onMounted(() => {
 .downArrow {
   position: fixed;
   bottom: 32px;
-  border-radius: 50%;
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;

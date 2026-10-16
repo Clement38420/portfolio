@@ -6,7 +6,6 @@ defineProps<{
 
 <template>
   <div class="card" :class="{ 'no-hover': noHover }">
-    <div class="highlight"></div>
     <div class="content"><slot></slot></div>
   </div>
 </template>
@@ -15,8 +14,6 @@ defineProps<{
 .card {
   position: relative;
   background-color: var(--bg-color);
-  border-radius: 24px;
-  box-shadow: var(--card-shadow);
   padding: 1.5em;
   transition:
     box-shadow 0.2s ease,
@@ -35,29 +32,7 @@ defineProps<{
 
 .card:not(.no-hover):hover {
   box-shadow: var(--card-shadow-high);
-  transform: translateY(-12px) scale(1.02);
-}
-
-.highlight {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 24px;
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-  background: linear-gradient(0, var(--bg-color), 80%, var(--bg-light-color));
-  transform-origin: top center;
-  transition: height 0.2s ease;
-}
-
-.card:not(.no-hover):hover .highlight {
-  height: 70%;
-}
-
-.card.no-hover .highlight {
-  height: 24px !important;
-  transition: none !important;
+  transform: translate(-5px, -5px);
 }
 
 .content {

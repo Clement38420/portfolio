@@ -84,7 +84,7 @@ nav {
   width: 100%;
   height: 70px;
   background-color: var(--bg-light-color);
-  box-shadow: var(--card-shadow);
+  border-bottom: 1px solid var(--bg-dark-color);
   display: flex;
   position: fixed;
   inset: 0 0 auto 0;
@@ -160,7 +160,6 @@ h1 {
   transform: translateX(-50%) scaleX(0);
   width: 60%;
   height: 0.15em;
-  border-radius: 100000px;
   transform-origin: center;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 1px 2px rgba(59, 130, 246, 0.15);
@@ -203,21 +202,19 @@ h1 {
 
 @media (hover: hover) {
   .language-switch:hover {
-    box-shadow: var(--card-shadow);
-    transform: translateY(-20%) scale(1.05);
+    box-shadow: 3px 3px 0 var(--bg-dark-color);
+    transform: translate(-3px, -3px);
   }
 }
 
 .language-switch:active {
-  box-shadow: var(--card-shadow-close);
-  transform: translateY(5%) scale(1);
+  transform: scale(0.98);
 }
 
 .language-switch img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 2px;
 }
 
 @media (min-width: 1000px) {

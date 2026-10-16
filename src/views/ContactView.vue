@@ -83,7 +83,6 @@ import BaseCard from '@/components/BaseCard.vue'
   width: 80px;
   height: 4px;
   background: linear-gradient(90deg, #3b82f6, #1d4ed8);
-  border-radius: 2px;
   transform-origin: center;
   animation: grow 0.8s ease-out 0.5s both;
 }
@@ -105,15 +104,15 @@ import BaseCard from '@/components/BaseCard.vue'
 }
 
 .linkedin-card:hover {
-  box-shadow: 0 20px 40px rgba(16, 71, 163, 0.3) !important;
+  box-shadow: 5px 5px 0 rgba(16, 71, 163, 0.35) !important;
 }
 
 .email-card:hover {
-  box-shadow: 0 20px 40px rgba(242, 66, 54, 0.3) !important;
+  box-shadow: 5px 5px 0 rgba(242, 66, 54, 0.35) !important;
 }
 
 .github-card:hover {
-  box-shadow: 0 20px 40px rgba(189, 109, 253, 0.3) !important;
+  box-shadow: 5px 5px 0 rgba(189, 109, 253, 0.35) !important;
 }
 
 .card-content {
@@ -195,7 +194,6 @@ import BaseCard from '@/components/BaseCard.vue'
   text-align: center;
   border: 1px solid #22c55e;
   padding: 0.5rem 1rem;
-  border-radius: 16px;
   background-color: rgba(34, 197, 94, 0.12);
   animation: fadeInUp 0.8s ease-out 0.9s backwards;
 }
