@@ -18,10 +18,10 @@ export class Bubble {
     this.velocity = velocity || { x: (Math.random() - 0.5) / 2, y: (Math.random() - 0.5) / 2 }
     this.radius = radius || Math.random() * 14 + 6
     this.color = color || {
-      h: 210,
-      s: 10,
-      l: Math.random() * 30 + 50,
-      a: 0.7,
+      h: 38,
+      s: 90,
+      l: Math.random() * 10 + 55,
+      a: Math.random() * 0.2 + 0.35,
     }
   }
 

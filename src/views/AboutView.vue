@@ -528,7 +528,7 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 150px;
-  background: linear-gradient(to top, var(--bg-dark-color), transparent);
+  background: linear-gradient(to top, var(--bg-page-color), transparent);
   pointer-events: none;
   z-index: 100;
 }

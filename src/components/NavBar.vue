@@ -136,7 +136,7 @@ h1 {
 }
 
 .view-link {
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
   text-transform: uppercase;
   padding: 12px;

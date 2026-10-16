@@ -13,7 +13,7 @@ import HomeBubbles from '@/components/HomeBubbles.vue'
     </h3>
   </div>
   <HomeBubbles></HomeBubbles>
-  <div class="animated-background"></div>
+  <div class="home-background"></div>
 </template>
 
 <style scoped>
@@ -61,21 +61,11 @@ h3 {
   animation-fill-mode: both;
 }
 
-.animated-background {
+.home-background {
   position: fixed;
   inset: 0;
-  z-index: -1;
-  background: linear-gradient(
-    45deg,
-    rgba(96, 165, 250, 0.15),
-    rgba(59, 130, 246, 0.18),
-    rgba(37, 99, 235, 0.12),
-    rgba(29, 78, 216, 0.2),
-    rgba(99, 102, 241, 0.16),
-    rgba(139, 92, 246, 0.14)
-  );
-  background-size: 400% 400%;
-  animation: gradientShift 8s ease infinite;
+  z-index: -2;
+  background: radial-gradient(ellipse at 50% 100%, #fde68a 0%, #fffbeb 75%);
 }
 
 .ense3-link {
@@ -104,17 +94,5 @@ h3 {
   transform: translate(2px, -2px);
   filter: brightness(0) saturate(100%) invert(29%) sepia(96%) saturate(5820%) hue-rotate(226deg)
     brightness(89%) contrast(90%);
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 25% 50%;
-  }
-  50% {
-    background-position: 75% 50%;
-  }
-  100% {
-    background-position: 25% 50%;
-  }
 }
 </style>
