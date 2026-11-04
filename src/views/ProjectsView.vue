@@ -58,6 +58,7 @@ const projects: Project[] = [
     name: 'robot',
     id: '7',
     category: Robotics,
+    links: [{ type: 'github', url: 'https://github.com/Clement38420/kiwi' }],
   },
   {
     name: 'communication-protocol',
